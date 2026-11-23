@@ -1,0 +1,140 @@
+window.LA_ANDREI_CONTENT = {
+  "version": 1,
+  "business": {
+    "name": "La Andrei",
+    "city": "Sibiu",
+    "address": "Complex Aida, Bulevardul General Vasile Milea",
+    "boltUrl": "https://food.bolt.eu/ro-ro/803-sibiu/p/149394-shaorma-la-andrei/",
+    "mapsUrl": "https://maps.google.com/?q=45.78860777%2C24.15142839",
+    "phone": "+40767666909",
+    "email": "",
+    "hours": []
+  },
+  "products": [
+    {
+      "id": "shaorma-mare",
+      "name": "Shaorma mare",
+      "category": "shaorma",
+      "categoryLabel": "Shaorma",
+      "grams": 700,
+      "price": 36,
+      "description": "Carne, cartofi, legume și sosuri, într-o lipie pe măsura poftei.",
+      "ingredients": [
+        "Lipie",
+        "Cartofi",
+        "Carne de pui",
+        "Sos picant",
+        "Maioneză",
+        "Usturoi",
+        "Tzatziki",
+        "Sos cocktail",
+        "Curry",
+        "Ketchup",
+        "Varză",
+        "Castraveți murați",
+        "Ardei",
+        "Roșii",
+        "Ceapă"
+      ],
+      "allergens": [],
+      "image": "assets/real-shawarma-large.jpg",
+      "imageAlt": "Shaorma mare în lipie rumenită, cu carne, cartofi și legume",
+      "available": true,
+      "visible": true,
+      "badge": "Populară"
+    },
+    {
+      "id": "kebab-farfurie",
+      "name": "Kebab la farfurie",
+      "category": "farfurie",
+      "categoryLabel": "La farfurie",
+      "grams": 700,
+      "price": 42,
+      "description": "Tot gustul de kebab: carne, cartofi, legume și sosuri, la farfurie.",
+      "ingredients": [
+        "Lipie",
+        "Cartofi",
+        "Carne de pui",
+        "Sos picant",
+        "Maioneză",
+        "Usturoi",
+        "Tzatziki",
+        "Sos cocktail",
+        "Curry",
+        "Ketchup",
+        "Varză",
+        "Castraveți murați",
+        "Ardei",
+        "Roșii",
+        "Ceapă"
+      ],
+      "allergens": [],
+      "image": "assets/real-kebab-plate.jpg",
+      "imageAlt": "Kebab la farfurie cu carne, cartofi prăjiți, salată și sosuri",
+      "available": true,
+      "visible": true,
+      "badge": "La farfurie"
+    },
+    {
+      "id": "shaorma-medie",
+      "name": "Shaorma medie",
+      "category": "shaorma",
+      "categoryLabel": "Shaorma",
+      "grams": 450,
+      "price": 31,
+      "description": "Același gust bun, într-o porție numai bună pentru o pauză de masă.",
+      "ingredients": [
+        "Lipie",
+        "Cartofi",
+        "Carne de pui",
+        "Sos picant",
+        "Maioneză",
+        "Usturoi",
+        "Tzatziki",
+        "Sos cocktail",
+        "Curry",
+        "Ketchup",
+        "Varză",
+        "Castraveți murați",
+        "Ardei",
+        "Roșii",
+        "Ceapă"
+      ],
+      "allergens": [],
+      "image": "assets/real-shawarma-medium.jpg",
+      "imageAlt": "Shaorma cu carne, varză, salată și sosuri",
+      "available": true,
+      "visible": true,
+      "badge": ""
+    }
+  ],
+  "reviews": [
+    {
+      "id": "exemplu-alex",
+      "author": "Exemplu — Alex",
+      "avatar": "",
+      "rating": 5,
+      "text": "O porție generoasă și combinația de sosuri pe gustul meu. Genul de pauză de masă pe care aș repeta-o.",
+      "isExample": true,
+      "visible": true
+    },
+    {
+      "id": "exemplu-maria",
+      "author": "Exemplu — Maria",
+      "avatar": "",
+      "rating": 4,
+      "text": "Mi-ar plăcea să pot alege ușor între varianta în lipie și cea la farfurie. Meniul este clar, iar preparatele arată apetisant.",
+      "isExample": true,
+      "visible": true
+    },
+    {
+      "id": "exemplu-radu",
+      "author": "Exemplu — Radu",
+      "avatar": "",
+      "rating": 5,
+      "text": "Carne, cartofi și legume într-o singură porție — exact combinația pe care aș alege-o când mi-e foame.",
+      "isExample": true,
+      "visible": true
+    }
+  ]
+};

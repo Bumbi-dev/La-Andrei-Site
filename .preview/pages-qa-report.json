@@ -1,0 +1,180 @@
+{
+  "checks": [
+    {
+      "name": "index-desktop product popup",
+      "open": true,
+      "modal": true,
+      "ingredients": 15,
+      "portion": "Porție: 700 g36 lei",
+      "focusInside": true,
+      "overflow": false
+    },
+    {
+      "name": "index-mobile product popup",
+      "open": true,
+      "modal": true,
+      "ingredients": 15,
+      "portion": "Porție: 700 g36 lei",
+      "focusInside": true,
+      "overflow": false
+    },
+    {
+      "name": "Review avatars",
+      "avatars": [
+        {
+          "round": "50%",
+          "width": 44,
+          "height": 44,
+          "text": "A"
+        },
+        {
+          "round": "50%",
+          "width": 44,
+          "height": 44,
+          "text": "M"
+        },
+        {
+          "round": "50%",
+          "width": 44,
+          "height": 44,
+          "text": "R"
+        }
+      ]
+    },
+    {
+      "name": "meniu-desktop product popup",
+      "open": true,
+      "modal": true,
+      "ingredients": 15,
+      "portion": "Porție: 700 g36 lei",
+      "focusInside": true,
+      "overflow": false
+    },
+    {
+      "name": "meniu-mobile product popup",
+      "open": true,
+      "modal": true,
+      "ingredients": 15,
+      "portion": "Porție: 700 g36 lei",
+      "focusInside": true,
+      "overflow": false
+    },
+    {
+      "name": "Contact and location",
+      "location": true,
+      "phone": true,
+      "map": true,
+      "enabled": true,
+      "deferred": true
+    },
+    {
+      "name": "Editor avatar field",
+      "present": true
+    }
+  ],
+  "viewports": [
+    {
+      "label": "index.html-1440",
+      "width": 1440,
+      "documentWidth": 1425,
+      "overflowing": []
+    },
+    {
+      "label": "index.html-390",
+      "width": 390,
+      "documentWidth": 390,
+      "overflowing": [
+        {
+          "tag": "IMG",
+          "class": ""
+        },
+        {
+          "tag": "IMG",
+          "class": ""
+        },
+        {
+          "tag": "IMG",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "label": "index.html-320",
+      "width": 320,
+      "documentWidth": 320,
+      "overflowing": []
+    },
+    {
+      "label": "meniu.html-1440",
+      "width": 1440,
+      "documentWidth": 1425,
+      "overflowing": []
+    },
+    {
+      "label": "meniu.html-390",
+      "width": 390,
+      "documentWidth": 390,
+      "overflowing": [
+        {
+          "tag": "IMG",
+          "class": ""
+        },
+        {
+          "tag": "IMG",
+          "class": ""
+        },
+        {
+          "tag": "IMG",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "label": "meniu.html-320",
+      "width": 320,
+      "documentWidth": 320,
+      "overflowing": []
+    },
+    {
+      "label": "contact.html-1440",
+      "width": 1440,
+      "documentWidth": 1425,
+      "overflowing": []
+    },
+    {
+      "label": "contact.html-390",
+      "width": 390,
+      "documentWidth": 390,
+      "overflowing": []
+    },
+    {
+      "label": "contact.html-320",
+      "width": 320,
+      "documentWidth": 320,
+      "overflowing": []
+    }
+  ],
+  "errors": [],
+  "screenshots": [
+    "pages-popup-index-desktop.png",
+    "pages-index-1440.png",
+    "pages-index-390.png",
+    "pages-popup-index-mobile.png",
+    "pages-index-320.png",
+    "pages-popup-meniu-desktop.png",
+    "pages-meniu-1440.png",
+    "pages-meniu-390.png",
+    "pages-popup-meniu-mobile.png",
+    "pages-meniu-320.png",
+    "pages-contact-1440.png",
+    "pages-contact-390.png",
+    "pages-contact-320.png"
+  ],
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Edg/158.0.4370.33",
+    "revision": "@56b8f691820060b6e15f702165117f203442943f",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.0.0 Safari/537.36 Edg/158.0.0.0",
+    "jsVersion": "15.8.13.3"
+  }
+}

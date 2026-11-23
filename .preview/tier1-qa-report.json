@@ -1,0 +1,270 @@
+{
+  "checks": [
+    {
+      "name": "local images",
+      "assets": [
+        {
+          "src": "assets/la-andrei-logo.png",
+          "loaded": true
+        },
+        {
+          "src": "assets/real-shawarma-large.jpg",
+          "loaded": true
+        },
+        {
+          "src": "assets/la-andrei-logo.png",
+          "loaded": true
+        },
+        {
+          "src": "assets/real-shawarma-large.jpg",
+          "loaded": true
+        },
+        {
+          "src": "assets/real-kebab-plate.jpg",
+          "loaded": true
+        },
+        {
+          "src": "assets/real-shawarma-medium.jpg",
+          "loaded": true
+        },
+        {
+          "src": "assets/la-andrei-logo.png",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "name": "navigation anchors",
+      "anchors": [
+        {
+          "href": "#continut",
+          "exists": true
+        },
+        {
+          "href": "#acasa",
+          "exists": true
+        },
+        {
+          "href": "#meniu",
+          "exists": true
+        },
+        {
+          "href": "#recenzii",
+          "exists": true
+        },
+        {
+          "href": "#locatie",
+          "exists": true
+        },
+        {
+          "href": "#contact",
+          "exists": true
+        },
+        {
+          "href": "#meniu",
+          "exists": true
+        },
+        {
+          "href": "#locatie",
+          "exists": true
+        },
+        {
+          "href": "#locatie",
+          "exists": true
+        },
+        {
+          "href": "#acasa",
+          "exists": true
+        },
+        {
+          "href": "#despre",
+          "exists": true
+        },
+        {
+          "href": "#recenzii",
+          "exists": true
+        },
+        {
+          "href": "#meniu",
+          "exists": true
+        }
+      ]
+    },
+    {
+      "name": "menu filter",
+      "category": "all",
+      "visible": [
+        "shaorma",
+        "farfurie",
+        "shaorma"
+      ],
+      "pressed": 1
+    },
+    {
+      "name": "menu filter",
+      "category": "shaorma",
+      "visible": [
+        "shaorma",
+        "shaorma"
+      ],
+      "pressed": 1
+    },
+    {
+      "name": "menu filter",
+      "category": "farfurie",
+      "visible": [
+        "farfurie"
+      ],
+      "pressed": 1
+    },
+    {
+      "name": "navbar fade",
+      "scrolling": [
+        {
+          "scrollY": 0,
+          "opacity": 0,
+          "top": 0
+        },
+        {
+          "scrollY": 100,
+          "opacity": 0.25,
+          "top": 0
+        },
+        {
+          "scrollY": 200,
+          "opacity": 0.5,
+          "top": 0
+        },
+        {
+          "scrollY": 400,
+          "opacity": 1,
+          "top": 0
+        },
+        {
+          "scrollY": 800,
+          "opacity": 1,
+          "top": 0
+        },
+        {
+          "scrollY": 0,
+          "opacity": 0,
+          "top": 0
+        }
+      ]
+    },
+    {
+      "name": "demonstrative reviews",
+      "cards": 3
+    },
+    {
+      "name": "hamburger open and Escape close",
+      "opened": {
+        "expanded": "true",
+        "display": "flex"
+      },
+      "closed": "false"
+    },
+    {
+      "name": "editor starter data",
+      "products": 3,
+      "export": true,
+      "import": true,
+      "preview": "Populară\n\nShaorma · 700 g\n\nShaorma mare\n\nCarne, cartofi, legume și sosuri, într-o lipie pe măsura poftei.\n\nIngrediente\n\n36 lei\n\nComandă"
+    },
+    {
+      "name": "editor product edit",
+      "preview": "Populară\n\nShaorma · 700 g\n\nProdus verificare QA\n\nCarne, cartofi, legume și sosuri, într-o lipie pe măsura poftei.\n\nIngrediente\n\n36 lei\n\nComandă",
+      "status": "Produsul a fost modificat în ciornă. Exportă JSON-ul pentru a actualiza proiectul."
+    },
+    {
+      "name": "editor add product",
+      "count": 4,
+      "preview": "Shaorma · 500 g\n\nProdus QA adăugat\n\nDescriere pentru verificarea editorului.\n\nIngrediente\n\n25 lei\n\nComandă",
+      "status": "Produsul a fost modificat în ciornă. Exportă JSON-ul pentru a actualiza proiectul."
+    },
+    {
+      "name": "editor invalid-import preservation",
+      "count": 4,
+      "preview": "Shaorma · 500 g\n\nProdus QA adăugat\n\nDescriere pentru verificarea editorului.\n\nIngrediente\n\n25 lei\n\nComandă",
+      "status": "Import oprit; conținutul existent a fost păstrat.\nExpected double-quoted property name in JSON at position 13 (line 1 column 14)"
+    },
+    {
+      "name": "editor JSON export",
+      "file": "site.json",
+      "products": 4
+    },
+    {
+      "name": "editor negative-price validation",
+      "valid": false,
+      "validation": "Value must be greater than or equal to 0.01."
+    }
+  ],
+  "viewports": [
+    {
+      "label": "site-1440",
+      "width": 1440,
+      "documentWidth": 1440,
+      "overflowing": []
+    },
+    {
+      "label": "site-900",
+      "width": 900,
+      "documentWidth": 900,
+      "overflowing": []
+    },
+    {
+      "label": "site-390",
+      "width": 390,
+      "documentWidth": 390,
+      "overflowing": [
+        {
+          "tag": "IMG",
+          "class": ""
+        },
+        {
+          "tag": "IMG",
+          "class": ""
+        },
+        {
+          "tag": "IMG",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "label": "site-320",
+      "width": 320,
+      "documentWidth": 320,
+      "overflowing": []
+    },
+    {
+      "label": "editor-1440",
+      "width": 1440,
+      "documentWidth": 1440,
+      "overflowing": []
+    },
+    {
+      "label": "editor-390",
+      "width": 390,
+      "documentWidth": 390,
+      "overflowing": []
+    }
+  ],
+  "errors": [],
+  "screenshots": [
+    "tier1-site-1440.png",
+    "tier1-desktop-viewport.png",
+    "tier1-site-900.png",
+    "tier1-site-390.png",
+    "tier1-site-320.png",
+    "tier1-editor-desktop.png",
+    "tier1-editor-mobile.png"
+  ],
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Edg/158.0.4370.33",
+    "revision": "@56b8f691820060b6e15f702165117f203442943f",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.0.0 Safari/537.36 Edg/158.0.0.0",
+    "jsVersion": "15.8.13.3"
+  }
+}

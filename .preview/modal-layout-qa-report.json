@@ -1,0 +1,183 @@
+{
+  "checks": [
+    {
+      "name": "Horizontal dialog 1440",
+      "geometry": {
+        "hero": {
+          "left": 273.5,
+          "top": 140.8125,
+          "right": 1151.5,
+          "bottom": 460.8125,
+          "width": 878,
+          "height": 320
+        },
+        "heading": {
+          "left": 305.5,
+          "top": 373.9375,
+          "right": 1119.5,
+          "bottom": 436.8125,
+          "width": 814,
+          "height": 62.875
+        },
+        "details": {
+          "left": 305.5,
+          "top": 488.8125,
+          "right": 1119.5,
+          "bottom": 777.171875,
+          "width": 814,
+          "height": 288.359375
+        },
+        "order": {
+          "left": 305.5,
+          "top": 777.171875,
+          "right": 1119.5,
+          "bottom": 829.171875,
+          "width": 814,
+          "height": 52
+        },
+        "button": {
+          "left": 919.140625,
+          "top": 777.171875,
+          "right": 1119.5,
+          "bottom": 829.171875,
+          "width": 200.359375,
+          "height": 52
+        },
+        "price": {
+          "left": 1051.265625,
+          "top": 488.8125,
+          "right": 1119.5,
+          "bottom": 520.8125,
+          "width": 68.234375,
+          "height": 32
+        },
+        "dialogWidth": 878,
+        "overflow": false
+      }
+    },
+    {
+      "name": "Horizontal dialog 390",
+      "geometry": {
+        "hero": {
+          "left": 20,
+          "top": 43.203125,
+          "right": 370,
+          "bottom": 273.203125,
+          "width": 350,
+          "height": 230
+        },
+        "heading": {
+          "left": 40,
+          "top": 199.828125,
+          "right": 350,
+          "bottom": 253.203125,
+          "width": 310,
+          "height": 53.375
+        },
+        "details": {
+          "left": 40,
+          "top": 295.203125,
+          "right": 350,
+          "bottom": 749.71875,
+          "width": 310,
+          "height": 454.515625
+        },
+        "order": {
+          "left": 40,
+          "top": 753.71875,
+          "right": 350,
+          "bottom": 801.3125,
+          "width": 310,
+          "height": 47.59375
+        },
+        "button": {
+          "left": 168.78125,
+          "top": 753.71875,
+          "right": 350,
+          "bottom": 801.3125,
+          "width": 181.21875,
+          "height": 47.59375
+        },
+        "price": {
+          "left": 281.765625,
+          "top": 295.203125,
+          "right": 350,
+          "bottom": 327.203125,
+          "width": 68.234375,
+          "height": 32
+        },
+        "dialogWidth": 350,
+        "overflow": false
+      }
+    },
+    {
+      "name": "Horizontal dialog 320",
+      "geometry": {
+        "hero": {
+          "left": 20,
+          "top": 43.203125,
+          "right": 300,
+          "bottom": 273.203125,
+          "width": 280,
+          "height": 230
+        },
+        "heading": {
+          "left": 40,
+          "top": 199.828125,
+          "right": 280,
+          "bottom": 253.203125,
+          "width": 240,
+          "height": 53.375
+        },
+        "details": {
+          "left": 40,
+          "top": 295.203125,
+          "right": 280,
+          "bottom": 814.703125,
+          "width": 240,
+          "height": 519.5
+        },
+        "order": {
+          "left": 40,
+          "top": 818.703125,
+          "right": 280,
+          "bottom": 866.296875,
+          "width": 240,
+          "height": 47.59375
+        },
+        "button": {
+          "left": 98.78125,
+          "top": 818.703125,
+          "right": 280,
+          "bottom": 866.296875,
+          "width": 181.21875,
+          "height": 47.59375
+        },
+        "price": {
+          "left": 211.765625,
+          "top": 295.203125,
+          "right": 280,
+          "bottom": 327.203125,
+          "width": 68.234375,
+          "height": 32
+        },
+        "dialogWidth": 280,
+        "overflow": false
+      }
+    }
+  ],
+  "viewports": [],
+  "errors": [],
+  "screenshots": [
+    "modal-horizontal-1440.png",
+    "modal-horizontal-390.png",
+    "modal-horizontal-320.png"
+  ],
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Edg/158.0.4370.33",
+    "revision": "@56b8f691820060b6e15f702165117f203442943f",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.0.0 Safari/537.36 Edg/158.0.0.0",
+    "jsVersion": "15.8.13.3"
+  }
+}

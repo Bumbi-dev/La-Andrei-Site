@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ro">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Editor local · La Andrei</title>
+    <link rel="stylesheet" href="editor.css">
+    <script src="content-model.js" defer></script>
+    <script src="content/editor-data.js" defer></script>
+    <script src="editor.js" defer></script>
+</head>
+<body>
+    <header class="editor-header">
+        <div><p class="eyebrow">La Andrei</p><h1>Editor local</h1><p>Meniu, date de contact și recenzii demonstrative.</p></div>
+        <a class="button button-secondary" href="index.html" target="_blank" rel="noopener">Vezi site-ul</a>
+    </header>
+    <main class="editor-main">
+        <div class="editor-toolbar" aria-label="Fișierul de conținut">
+            <label class="button button-secondary" for="import-json">Importă JSON<input id="import-json" type="file" accept=".json,application/json"></label>
+            <button class="button button-primary" id="export-json" type="button">Descarcă site.json</button>
+            <button class="button button-secondary" id="save-folder" type="button" hidden>Salvează în folderul site-ului</button>
+            <button class="button button-secondary" id="restore-draft" type="button" hidden>Restaurează ciorna locală</button>
+            <span class="save-state" id="save-state">Conținut încărcat</span>
+        </div>
+        <div class="editor-status" id="editor-status" role="status" aria-live="polite">Modificările rămân locale până la export și regenerarea site-ului.</div>
+        <details class="editor-help"><summary>Cum actualizez site-ul?</summary><ol><li>Editează câmpurile și apasă „Aplică modificările” în formular.</li><li>Descarcă JSON-ul și înlocuiește <code>content/site.json</code> din proiect sau salvează-l direct în folder, dacă browserul permite.</li><li>Rulează <code>node scripts/build.cjs</code> în folderul proiectului. Site-ul și folderul public <code>dist/</code> se regenerează.</li><li>Publică doar fișierele din <code>dist/</code> prin serviciul de găzduire. Editorul nu publică automat online.</li></ol><p>Fotografiile noi se copiază în <code>assets/</code>, apoi se completează calea lor în formular. Telefonul, emailul și programul se completează numai după confirmare.</p></details>
+
+        <div class="editor-tabs" role="group" aria-label="Tipul conținutului">
+            <button class="editor-tab is-active" data-panel="products" type="button" aria-pressed="true">Produse</button>
+            <button class="editor-tab" data-panel="business" type="button" aria-pressed="false">Restaurant</button>
+            <button class="editor-tab" data-panel="reviews" type="button" aria-pressed="false">Recenzii exemplu</button>
+        </div>
+
+        <section class="editor-panel" data-panel-content="products" aria-label="Editarea produselor">
+            <aside class="editor-sidebar"><div class="sidebar-heading"><h2>Produse</h2><button class="small-button" id="add-product" type="button">Adaugă produs</button></div><div class="item-list" id="product-list"></div></aside>
+            <div class="editor-workspace">
+                <form id="product-form" class="editor-form">
+                    <div class="form-heading"><h2>Detalii produs</h2><button class="delete-button" id="remove-product" type="button">Șterge produsul</button></div>
+                    <div class="form-grid">
+                        <label>Nume<input name="name" required maxlength="120"></label>
+                        <label>ID unic<input name="id" required pattern="[a-z0-9]+(-[a-z0-9]+)*" maxlength="80"><small>Litere mici fără diacritice, cifre și cratimă.</small></label>
+                        <label>Categorie — ID<input name="category" required pattern="[a-z0-9]+(-[a-z0-9]+)*" maxlength="80"></label>
+                        <label>Categorie — text afișat<input name="categoryLabel" required maxlength="80"></label>
+                        <label>Preț (lei)<input name="price" type="number" min="0.01" max="10000" step="0.01" required></label>
+                        <label>Gramaj (g)<input name="grams" type="number" min="1" max="100000" step="1" required></label>
+                        <label class="full-width">Descriere scurtă<textarea name="description" rows="2" maxlength="500"></textarea></label>
+                        <label class="full-width">Ingrediente, separate prin virgulă<textarea name="ingredients" rows="3" required></textarea></label>
+                        <label class="full-width">Alergeni confirmați, separați prin virgulă<input name="allergens"><small>Lasă gol dacă lista nu a fost confirmată. Gol nu înseamnă „fără alergeni”.</small></label>
+                        <label class="full-width">Calea fotografiei<input name="image" required maxlength="250" placeholder="assets/fotografie.jpg"></label>
+                        <label class="full-width">Descriere accesibilă a fotografiei<input name="imageAlt" required maxlength="300"></label>
+                        <label class="full-width">Etichetă pe fotografie<input name="badge" maxlength="80" placeholder="Opțional"></label>
+                    </div>
+                    <div class="checkbox-row"><label><input name="visible" type="checkbox"> Afișat în meniu</label><label><input name="available" type="checkbox"> Disponibil pentru comandă</label></div>
+                    <button class="button button-primary" type="submit">Aplică modificările</button>
+                </form>
+                <section class="preview-panel" aria-labelledby="preview-heading"><p class="eyebrow">Previzualizare</p><h2 id="preview-heading">Cum apare produsul</h2><div id="product-preview"></div></section>
+            </div>
+        </section>
+
+        <section class="editor-panel single-panel" data-panel-content="business" aria-label="Datele restaurantului" hidden>
+            <form id="business-form" class="editor-form">
+                <h2>Datele restaurantului</h2><p class="form-note">Lasă necompletate datele care nu au fost confirmate. Programul nu se inventează.</p>
+                <div class="form-grid">
+                    <label>Nume<input name="name" required maxlength="100"></label><label>Oraș<input name="city" required maxlength="100"></label>
+                    <label class="full-width">Adresă<input name="address" required maxlength="300"></label>
+                    <label class="full-width">Link oficial Bolt Food<input name="boltUrl" type="url" required></label>
+                    <label class="full-width">Link Google Maps<input name="mapsUrl" type="url" required></label>
+                    <label>Telefon<input name="phone" type="tel" maxlength="40"></label><label>Email<input name="email" type="email" maxlength="150"></label>
+                    <label class="full-width">Program — câte un interval pe rând<textarea name="hours" rows="4" placeholder="Completează numai intervalele confirmate"></textarea></label>
+                </div><button class="button button-primary" type="submit">Aplică modificările</button>
+            </form>
+        </section>
+
+        <section class="editor-panel" data-panel-content="reviews" aria-label="Recenzii demonstrative" hidden>
+            <aside class="editor-sidebar"><div class="sidebar-heading"><h2>Exemple</h2><button class="small-button" id="add-review" type="button">Adaugă exemplu</button></div><div class="item-list" id="review-list"></div></aside>
+            <form id="review-form" class="editor-form">
+                <div class="form-heading"><h2>Recenzie demonstrativă</h2><button class="delete-button" id="remove-review" type="button">Șterge exemplul</button></div>
+                <p class="form-note">Toate aceste texte sunt fictive și vor avea eticheta „Exemplu fictiv” pe site. Nu sunt preluate din Google Maps și nu contribuie la un rating real.</p>
+                <div class="form-grid"><label>Autor afișat<input name="author" required maxlength="100"></label><label>ID unic<input name="id" required pattern="[a-z0-9]+(-[a-z0-9]+)*" maxlength="80"></label><label>Stele (1–5)<input name="rating" type="number" min="1" max="5" step="1" required></label><label class="full-width">Text<textarea name="text" rows="5" required maxlength="1000"></textarea></label></div>
+                <label class="review-avatar-field">Fotografie de profil (opțional)<input name="avatar" maxlength="250" placeholder="assets/profil.jpg"><small>Lasă gol pentru un avatar rotund cu inițiale. Fotografia se copiază în folderul assets/.</small></label>
+                <div class="checkbox-row"><label><input name="visible" type="checkbox"> Afișează acest exemplu</label></div><button class="button button-primary" type="submit">Aplică modificările</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
