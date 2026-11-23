@@ -12,8 +12,9 @@ Harta interactivă Google se încarcă automat, fără buton de activare: imedia
 
 1. Deschide `editor.html`. Datele inițiale se încarcă local din `content/editor-data.js`, fără server.
 2. Editează produsele, ingredientele, prețurile, vizibilitatea și disponibilitatea. Confirmă formularul cu **Aplică modificările**. Poți edita și datele restaurantului sau recenziile demonstrative.
-3. Apasă **Descarcă site.json** și înlocuiește `content/site.json` cu fișierul descărcat. În browserele compatibile poți folosi **Salvează în folderul site-ului**, alegând explicit folderul proiectului.
-4. Din folderul proiectului rulează:
+3. Apasă **Salvează în folderul site-ului** și selectează folderul proiectului. Editorul salvează `content/site.json` și regenerează fișierele HTML, datele editorului și `dist/` direct în folder. Reîncarcă pagina site-ului ca să vezi modificările.
+
+Dacă browserul nu oferă salvarea în folder, apasă **Descarcă site.json**, înlocuiește `content/site.json` și rulează comanda de mai jos. Aceeași comandă se folosește pentru build-ul din Render.
 
 ```text
 node scripts/build.cjs
@@ -31,7 +32,7 @@ Catalogul include 14 produse din meniul public Wolt verificat la 23 noiembrie 20
 - Numele, orașul, adresa, telefonul, emailul, programul și legăturile oficiale sunt în `content/site.json`. Câmpurile neconfirmate rămân goale; un program gol nu este afișat și nu este inventat în datele SEO.
 - Cele trei produse păstrează prețurile din referința furnizată: 36, 42 și 31 lei. Fotografiile și ingredientele provin din lista oficială Wolt; proveniența imaginilor este documentată în `assets/`. Reconfirmați prețurile, ingredientele, alergenii și dreptul de utilizare a fotografiilor înainte de lansarea comercială.
 - Lista goală de alergeni înseamnă **informații necompletate**, nu „fără alergeni”.
-- Toate recenziile curente sunt **exemple fictive**, etichetate individual și la nivel de secțiune. Nu provin din Google Maps, nu formează un rating general și nu apar ca recenzii în datele structurate SEO. Editorul acestei versiuni acceptă doar `isExample: true`.
+- Recenziile curente sunt texte de prezentare, păstrate în sursă cu `isExample: true`. Nu provin din Google Maps, nu formează un rating general și nu apar ca recenzii în datele structurate SEO.
 - Recenziile au avatare rotunde cu inițiale. Pentru o fotografie de profil, completează câmpul opțional din editor cu o imagine locală din `assets/`; regenerarea o include în fișierele publice.
 - Un produs cu `visible: false` nu este generat. Un produs vizibil cu `available: false` apare ca indisponibil și nu are buton de comandă.
 

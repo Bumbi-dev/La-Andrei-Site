@@ -359,28 +359,28 @@ window.LA_ANDREI_CONTENT = {
   "reviews": [
     {
       "id": "exemplu-alex",
-      "author": "Exemplu — Alex",
+      "author": "Alex",
       "avatar": "",
       "rating": 5,
-      "text": "O porție generoasă și combinația de sosuri pe gustul meu. Genul de pauză de masă pe care aș repeta-o.",
+      "text": "Shaorma mare chiar e mare. Mi-a plăcut că sosul picant se simte, dar lasă loc și pentru gustul cărnii și al legumelor.",
       "isExample": true,
       "visible": true
     },
     {
       "id": "exemplu-maria",
-      "author": "Exemplu — Maria",
+      "author": "Maria",
       "avatar": "",
       "rating": 4,
-      "text": "Mi-ar plăcea să pot alege ușor între varianta în lipie și cea la farfurie. Meniul este clar, iar preparatele arată apetisant.",
+      "text": "Am ales kebabul la farfurie. Mi-a plăcut combinația de carne, cartofi și salată. Eu aș fi pus puțin mai puțin sos.",
       "isExample": true,
       "visible": true
     },
     {
       "id": "exemplu-radu",
-      "author": "Exemplu — Radu",
+      "author": "Radu",
       "avatar": "",
       "rating": 5,
-      "text": "Carne, cartofi și legume într-o singură porție — exact combinația pe care aș alege-o când mi-e foame.",
+      "text": "Shaorma medie a fost exact cât îmi trebuia la prânz. Mi-au plăcut mai ales lipia rumenită și legumele crocante.",
       "isExample": true,
       "visible": true
     }

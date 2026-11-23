@@ -7,6 +7,7 @@
     <title>Editor local · La Andrei</title>
     <link rel="stylesheet" href="editor.css">
     <script src="content-model.js" defer></script>
+    <script src="site-builder.js" defer></script>
     <script src="content/editor-data.js" defer></script>
     <script src="editor.js" defer></script>
 </head>
@@ -24,7 +25,7 @@
             <span class="save-state" id="save-state">Conținut încărcat</span>
         </div>
         <div class="editor-status" id="editor-status" role="status" aria-live="polite">Modificările rămân locale până la export și regenerarea site-ului.</div>
-        <details class="editor-help"><summary>Cum actualizez site-ul?</summary><ol><li>Editează câmpurile și apasă „Aplică modificările” în formular.</li><li>Descarcă JSON-ul și înlocuiește <code>content/site.json</code> din proiect sau salvează-l direct în folder, dacă browserul permite.</li><li>Rulează <code>node scripts/build.cjs</code> în folderul proiectului. Site-ul și folderul public <code>dist/</code> se regenerează.</li><li>Publică doar fișierele din <code>dist/</code> prin serviciul de găzduire. Editorul nu publică automat online.</li></ol><p>Fotografiile noi se copiază în <code>assets/</code>, apoi se completează calea lor în formular. Telefonul, emailul și programul se completează numai după confirmare.</p></details>
+        <details class="editor-help"><summary>Cum actualizez site-ul?</summary><ol><li>Editează câmpurile și apasă „Aplică modificările” în formular.</li><li>Apasă „Salvează în folderul site-ului” și selectează folderul proiectului. Editorul actualizează JSON-ul, paginile HTML și folderul <code>dist/</code>.</li><li>Dacă browserul nu permite salvarea în folder, descarcă JSON-ul, înlocuiește <code>content/site.json</code> și rulează <code>node scripts/build.cjs</code>.</li></ol><p>Fotografiile noi se copiază în <code>assets/</code>, apoi se completează calea lor în formular. Editorul actualizează fișierele locale.</p></details>
 
         <div class="editor-tabs" role="group" aria-label="Tipul conținutului">
             <button class="editor-tab is-active" data-panel="products" type="button" aria-pressed="true">Produse</button>

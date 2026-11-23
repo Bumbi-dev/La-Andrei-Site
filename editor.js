@@ -254,22 +254,68 @@
     });
     const saveFolder = document.querySelector('#save-folder');
     if (typeof window.showDirectoryPicker === 'function' && window.isSecureContext) saveFolder.hidden = false;
+
+    async function projectFile(directory, relativePath, create = false) {
+        const parts = relativePath.split('/');
+        const filename = parts.pop();
+        for (const part of parts) directory = await directory.getDirectoryHandle(part, { create });
+        return directory.getFileHandle(filename, { create });
+    }
+
+    async function writeProjectFile(directory, relativePath, value) {
+        const file = await projectFile(directory, relativePath, true);
+        const writable = await file.createWritable();
+        try {
+            await writable.write(value);
+            await writable.close();
+        } catch (error) {
+            try { await writable.abort(); } catch (_) { /* Preserve the original write error. */ }
+            throw error;
+        }
+    }
+
     saveFolder.addEventListener('click', async () => {
+        saveFolder.disabled = true;
         try {
             const exported = exportValue();
             const directory = await window.showDirectoryPicker({ mode: 'readwrite' });
-            await directory.getFileHandle('index.html');
             await directory.getFileHandle('content-model.js');
-            const content = await directory.getDirectoryHandle('content');
-            const file = await content.getFileHandle('site.json');
-            const writable = await file.createWritable();
-            await writable.write(exported);
-            await writable.close();
-            updateDirty(false);
-            report('content/site.json a fost salvat. Rulează node scripts/build.cjs ca să regenerezi site-ul și dist/.');
+            await projectFile(directory, 'content/site.json');
+            report('Se actualizează paginile site-ului…');
+            const homepage = await (await projectFile(directory, 'index.html')).getFile();
+            const site = window.LaAndreiSite.prepareSite(await homepage.text(), JSON.parse(exported));
+
+            // Verifică toate fișierele sursă înainte de a suprascrie paginile.
+            const assetPaths = new Set([...site.referencedAssets, ...site.data.products.map(product => product.image)]);
+            const assets = new Map();
+            for (const asset of assetPaths) {
+                try {
+                    assets.set(asset, await (await projectFile(directory, asset)).getFile());
+                } catch (error) {
+                    if (error.name !== 'NotFoundError') throw error;
+                    throw new Error('Imagine inexistentă: ' + asset);
+                }
+            }
+            const publicFiles = [];
+            for (const filename of window.LaAndreiSite.publicFiles) {
+                publicFiles.push([filename, await (await projectFile(directory, filename)).getFile()]);
+            }
+
+            await writeProjectFile(directory, 'content/site.json', exported);
+            await writeProjectFile(directory, 'content/editor-data.js', site.editorData);
+            for (const [filename, html] of Object.entries(site.pages)) {
+                await writeProjectFile(directory, filename, html);
+                await writeProjectFile(directory, 'dist/' + filename, html);
+            }
+            for (const [filename, file] of publicFiles) await writeProjectFile(directory, 'dist/' + filename, file);
+            for (const asset of site.referencedAssets) await writeProjectFile(directory, 'dist/' + asset, assets.get(asset));
+            if (!formDirty && exportValue() === exported) updateDirty(false);
+            report('Datele, paginile HTML și folderul dist/ au fost actualizate. Reîncarcă pagina site-ului ca să vezi modificările.');
         } catch (error) {
             if (error.name === 'AbortError') report('Salvarea a fost anulată. Ciorna este păstrată.');
             else report('Salvarea nu s-a finalizat. Selectează folderul proiectului La Andrei sau folosește descărcarea JSON.\n' + error.message, true);
+        } finally {
+            saveFolder.disabled = false;
         }
     });
     window.addEventListener('beforeunload', (event) => {

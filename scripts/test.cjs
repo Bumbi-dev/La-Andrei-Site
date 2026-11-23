@@ -76,7 +76,7 @@ check('Text and attribute payloads stay escaped and reviews remain fictional', (
     assert.ok(model.renderMenu(safe).includes('&lt;script&gt;'));
     assert.ok(!model.renderMenu(safe).includes('<img src=x'));
     assert.ok(!model.renderReviews(safe).includes('<img src=x'));
-    assert.equal((model.renderReviews(safe).match(/Exemplu — /g) || []).length, 3);
+    assert.doesNotMatch(model.renderReviews(safe), /Exemplu — |Exemplu fictiv/);
     const changedReview = copy(data); changedReview.reviews[0].isExample = false;
     assert.throws(() => model.validate(changedReview), /doar exemple fictive/);
     assert.ok(!model.renderSchema(safe).includes('aggregateRating'));

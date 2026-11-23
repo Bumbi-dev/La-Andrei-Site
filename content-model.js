@@ -159,7 +159,7 @@
             const name = review.author.replace(/^Exemplu\s*[—–-]\s*/i, '').trim();
             const initials = name.split(/\s+/).slice(0, 2).map(word => Array.from(word)[0] || '').join('').toLocaleUpperCase('ro-RO');
             const avatar = review.avatar ? '<img src="' + escapeHtml(review.avatar) + '" alt="" width="44" height="44" loading="lazy">' : escapeHtml(initials || '?');
-            return '<figure class="review-card"><figcaption class="review-card-top"><span class="review-author"><span class="review-avatar" aria-hidden="true">' + avatar + '</span><span>' + escapeHtml(review.author) + '</span></span><span class="review-stars" role="img" aria-label="' + review.rating + ' din 5 stele"><span aria-hidden="true">' + '★'.repeat(review.rating) + '☆'.repeat(5 - review.rating) + '</span></span></figcaption><blockquote><p>„' + escapeHtml(review.text) + '”</p></blockquote></figure>';
+            return '<figure class="review-card"><figcaption class="review-card-top"><span class="review-author"><span class="review-avatar" aria-hidden="true">' + avatar + '</span><span>' + escapeHtml(name) + '</span></span><span class="review-stars" role="img" aria-label="' + review.rating + ' din 5 stele"><span aria-hidden="true">' + '★'.repeat(review.rating) + '☆'.repeat(5 - review.rating) + '</span></span></figcaption><blockquote><p>„' + escapeHtml(review.text) + '”</p></blockquote></figure>';
         }).join('\n') + '\n</div>';
     }
     function renderBusiness(data) {
