@@ -5,6 +5,7 @@ const assert = require('node:assert/strict');
 const vm = require('node:vm');
 const model = require('../content-model.js');
 const { build, replaceRegion } = require('./build.cjs');
+const { prepareSite } = require('../site-builder.js');
 const fullMenu = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../content/site.json'), 'utf8'));
 const data = { ...fullMenu, products: fullMenu.products.slice(0, 3) };
 const copy = (value) => JSON.parse(JSON.stringify(value));
@@ -15,6 +16,32 @@ check('Source content validates without mutation', () => {
     const source = JSON.stringify(data);
     assert.equal(model.validate(data).products.length, 3);
     assert.equal(JSON.stringify(data), source);
+});
+check('Shopping pages and menu actions share current public catalog data', () => {
+    const input = copy(fullMenu);
+    input.products[0].price = 37.5;
+    input.products[1].visible = false;
+    input.products[2].available = false;
+    const template = fs.readFileSync(path.resolve(__dirname, '../index.html'), 'utf8');
+    const prepared = prepareSite(template, input);
+    for (const name of ['index.html', 'meniu.html', 'cos.html', 'cont.html', 'contact.html']) {
+        const html = prepared.pages[name];
+        const script = html.match(/<script>(window\.LA_ANDREI_SERVICES = [\s\S]*?)<\/script>/)[1];
+        const scope = {};
+        vm.runInNewContext(script, { window: scope });
+        assert.equal(scope.LA_ANDREI_SERVICES.products[0].price, 37.5);
+        assert.ok(!scope.LA_ANDREI_SERVICES.products.some(product => product.id === input.products[1].id));
+        assert.ok(!('reviews' in scope.LA_ANDREI_SERVICES));
+        assert.ok(html.includes('src="servicii.js"'));
+    }
+    assert.match(prepared.pages['meniu.html'], /data-add-to-cart="shaorma-mare"/);
+    assert.ok(!prepared.pages['meniu.html'].includes('data-add-to-cart="' + input.products[2].id + '"'));
+    assert.match(prepared.pages['cos.html'], /id="payment-step"[\s\S]*Placeholder/);
+    assert.ok(!/<input[^>]*name="(?:card|cvv|password)"/.test(prepared.pages['cos.html']));
+    assert.match(prepared.pages['cont.html'], /id="loyalty-balance"/);
+    assert.match(prepared.pages['cont.html'], /id="order-history"/);
+    assert.equal(prepared.pages['servicii.html'], undefined);
+    assert.deepEqual(prepareSite(prepared.pages['index.html'], input).pages, prepared.pages);
 });
 check('The full catalog renders foods, drinks and unconfirmed quantities honestly', () => {
     const menu = model.validate(fullMenu);

@@ -130,7 +130,7 @@
             (options.modal ? '<button class="food-details-button" type="button"' + attributes + '>Ingrediente și gramaj</button>' : '') +
             (item.allergens.length ? '<p class="food-allergens"><strong>Alergeni:</strong> ' + h(item.allergens.join(', ')) + '.</p>' : '') +
             '<div class="food-bottom"><p class="food-price">' + formattedPrice + ' <span>lei</span></p>' +
-            (item.available ? '<a class="food-order bolt-link" href="' + h(business.boltUrl) + '" target="_blank" rel="noopener noreferrer" aria-label="Comandă ' + h(item.name.toLocaleLowerCase('ro-RO')) + ' pe Bolt Food">Comandă ' + bagIcon + '</a>' : '<span class="food-unavailable">Indisponibil momentan</span>') + '</div></div></article>';
+            (item.available ? '<button class="food-order shop-add" type="button" data-add-to-cart="' + h(item.id) + '" aria-label="Adaugă ' + h(item.name) + ' în coș">Adaugă în coș ' + bagIcon + '</button>' : '<span class="food-unavailable">Indisponibil momentan</span>') + '</div></div></article>';
     }
     function renderProductDialog(item, business) {
         const h = escapeHtml;
@@ -144,7 +144,7 @@
             (item.allergens.length ? '<p class="food-allergens"><strong>Alergeni:</strong> ' + h(item.allergens.join(', ')) + '.</p>' : '') +
             '<p class="product-dialog-note">Pentru detalii despre ingrediente și alergeni, <a href="contact.html">contactează restaurantul</a>.</p>' +
             '</div><div class="product-dialog-order">' +
-            (item.available ? '<a class="button button-primary bolt-link" href="' + h(business.boltUrl) + '" target="_blank" rel="noopener noreferrer">Comandă pe Bolt Food</a>' : '<p class="food-unavailable">Indisponibil momentan</p>') + '</div></div></div></dialog>';
+            (item.available ? '<button class="button button-primary shop-add" type="button" data-add-to-cart="' + h(item.id) + '">Adaugă în coș</button><a class="shop-dialog-cart" href="cos.html">Vezi coșul</a>' : '<p class="food-unavailable">Indisponibil momentan</p>') + '</div></div></div></dialog>';
     }
     function renderMenu(data, options = {}) {
         const visibleProducts = data.products.filter((item) => item.visible).slice(0, options.limit === undefined ? Infinity : options.limit);

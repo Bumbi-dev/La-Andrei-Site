@@ -1,10 +1,14 @@
 # La Andrei — site de prezentare
 
-Site static, fără instalare de pachete. Deschide `index.html` direct sau prin serverul local al editorului. Comenzile sunt redirecționate către Bolt Food; site-ul nu încasează bani și nu gestionează conturi/comenzi proprii.
+Site static, fără instalare de pachete. Pentru previzualizarea coșului și contului între pagini, folosește serverul local al editorului (de exemplu Live Server) sau site-ul publicat. Paginile de prezentare pot fi deschise și direct din folder. Comenzile, autentificarea și plata de pe site sunt demonstrații în browser. Linkurile Bolt Food deschid serviciul extern.
 
-Pagina principală păstrează primele trei preparate vizibile și secțiunea de locație. `meniu.html` afișează toate preparatele vizibile din JSON; `contact.html` reunește contactul și locația. Toate paginile se regenerează prin aceeași comandă, din structura paginii principale și din datele de conținut. Nu edita manual paginile generate `meniu.html` și `contact.html` dacă vrei să păstrezi schimbările după regenerare.
+Pagina principală păstrează primele trei preparate vizibile și secțiunea de locație. `meniu.html` afișează toate preparatele vizibile din JSON; `contact.html` reunește contactul și locația. `cos.html` și `cont.html` folosesc același design și aceeași sursă de date. Toate paginile se regenerează din `index.html`, `site-builder.js` și `content/site.json`, inclusiv prin salvarea din editor. Editează structura paginilor generate în `site-builder.js` pentru a păstra schimbările după regenerare.
 
-Un click pe fotografie, titlu, card sau butonul de detalii deschide un dialog cu ingredientele, gramajul total și prețul. Dialogul se închide prin buton, Escape sau click în afară. Butonul de comandă rămâne legătura directă către Bolt Food. Fără JavaScript, ingredientele rămân accesibile în fiecare card.
+Cardurile din pagina principală și `meniu.html` adaugă produse în același coș. `cos.html` permite schimbarea cantităților, alegerea livrării sau ridicării și o simulare de plată. Pasul de card afișează un placeholder, fără câmpuri pentru date bancare. `cont.html` prezintă autentificarea și crearea unui profil demo, istoricul comenzilor, fidelitatea și o previzualizare a panoului restaurantului. Starea se păstrează în `localStorage` pe același domeniu. Nu există autentificare reală, trimitere de comenzi sau procesare de plăți.
+
+Reguli demo: sold inițial 120 puncte, 1 punct pentru fiecare leu plătit pe produse după reducere, 100 puncte pentru o reducere de 10 lei (maximum o dată pe comandă, minimum 10 lei în produse), livrare 8 lei. Punctele se modifică după finalizarea simulării cu cont. Vizitatorii pot continua fără cont. Reîncărcarea după o simulare nu dublează comanda sau punctele.
+
+Un click pe fotografie, titlu, card sau butonul de detalii deschide un dialog cu ingredientele, gramajul total și prețul. Dialogul se închide prin buton, Escape sau click în afară. „Adaugă în coș” funcționează și direct din card. Fără JavaScript, ingredientele rămân accesibile în fiecare card.
 
 Harta interactivă Google se încarcă automat, fără buton de activare: imediat pe pagina de contact și când se apropie de zona vizibilă pe pagina principală. Adresa și legăturile directe rămân disponibile și fără JavaScript sau dacă harta nu se încarcă. Pagina de contact are un layout dedicat, adaptat pentru telefon, cu adresă, apel telefonic și acces la Bolt Food; programul și emailul apar doar dacă sunt completate în JSON.
 
