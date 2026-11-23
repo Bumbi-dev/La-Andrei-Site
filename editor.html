@@ -43,9 +43,10 @@
                         <label>Categorie — ID<input name="category" required pattern="[a-z0-9]+(-[a-z0-9]+)*" maxlength="80"></label>
                         <label>Categorie — text afișat<input name="categoryLabel" required maxlength="80"></label>
                         <label>Preț (lei)<input name="price" type="number" min="0.01" max="10000" step="0.01" required></label>
-                        <label>Gramaj (g)<input name="grams" type="number" min="1" max="100000" step="1" required></label>
+                        <label>Gramaj / volum<input name="grams" type="number" min="1" max="100000" step="1"><small>Lasă gol dacă valoarea nu este confirmată.</small></label>
+                        <label>Unitate<select name="unit"><option value="g">Grame (g)</option><option value="ml">Mililitri (ml)</option></select></label>
                         <label class="full-width">Descriere scurtă<textarea name="description" rows="2" maxlength="500"></textarea></label>
-                        <label class="full-width">Ingrediente, separate prin virgulă<textarea name="ingredients" rows="3" required></textarea></label>
+                        <label class="full-width">Ingrediente, separate prin virgulă<textarea name="ingredients" rows="3"></textarea><small>Lasă gol dacă lista nu este confirmată.</small></label>
                         <label class="full-width">Alergeni confirmați, separați prin virgulă<input name="allergens"><small>Lasă gol dacă lista nu a fost confirmată. Gol nu înseamnă „fără alergeni”.</small></label>
                         <label class="full-width">Calea fotografiei<input name="image" required maxlength="250" placeholder="assets/fotografie.jpg"></label>
                         <label class="full-width">Descriere accesibilă a fotografiei<input name="imageAlt" required maxlength="300"></label>

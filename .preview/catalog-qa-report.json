@@ -1,0 +1,115 @@
+{
+  "checks": [
+    {
+      "name": "Full menu",
+      "products": 16,
+      "images": 34
+    },
+    {
+      "category": "all",
+      "count": 16
+    },
+    {
+      "category": "shaorma",
+      "count": 3
+    },
+    {
+      "category": "farfurie",
+      "count": 2
+    },
+    {
+      "category": "kebab",
+      "count": 2
+    },
+    {
+      "category": "sandvisuri",
+      "count": 2
+    },
+    {
+      "category": "extra",
+      "count": 2
+    },
+    {
+      "category": "bauturi",
+      "count": 5
+    },
+    {
+      "name": "sprite-330",
+      "portion": "Porție: 330 ml8 lei"
+    },
+    {
+      "name": "sandwich-panini",
+      "portion": "Gramaj: De confirmat la restaurant30 lei"
+    },
+    {
+      "name": "kebab-box",
+      "portion": "Porție: 200 g20 lei"
+    }
+  ],
+  "viewports": [
+    {
+      "label": "catalog-1440",
+      "width": 1440,
+      "documentWidth": 1425,
+      "overflowing": []
+    },
+    {
+      "label": "catalog-390",
+      "width": 390,
+      "documentWidth": 390,
+      "overflowing": [
+        {
+          "tag": "IMG",
+          "class": ""
+        },
+        {
+          "tag": "IMG",
+          "class": ""
+        },
+        {
+          "tag": "IMG",
+          "class": ""
+        },
+        {
+          "tag": "IMG",
+          "class": ""
+        },
+        {
+          "tag": "IMG",
+          "class": ""
+        },
+        {
+          "tag": "IMG",
+          "class": ""
+        },
+        {
+          "tag": "IMG",
+          "class": ""
+        },
+        {
+          "tag": "IMG",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "label": "catalog-320",
+      "width": 320,
+      "documentWidth": 320,
+      "overflowing": []
+    }
+  ],
+  "errors": [],
+  "screenshots": [
+    "catalog-1440.png",
+    "catalog-390.png",
+    "catalog-320.png"
+  ],
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Edg/158.0.4370.33",
+    "revision": "@56b8f691820060b6e15f702165117f203442943f",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.0.0 Safari/537.36 Edg/158.0.0.0",
+    "jsVersion": "15.8.13.3"
+  }
+}

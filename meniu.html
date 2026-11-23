@@ -1,37 +1,30 @@
 <!doctype html>
 <html lang="ro">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#101010">
-    <meta name="description"
-        content="Toate preparatele La Andrei: ingrediente, gramaje și prețuri. Alege shaorma sau kebab și comandă prin Bolt Food.">
+    <meta name="description" content="Toate preparatele La Andrei: ingrediente, gramaje și prețuri. Alege shaorma sau kebab și comandă prin Bolt Food.">
     <title>Meniu · La Andrei · Sibiu</title>
     <link rel="icon" type="image/png" href="assets/la-andrei-logo.png">
     <link rel="stylesheet" href="style.css">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ro_RO">
     <meta property="og:title" content="Meniu · La Andrei · Sibiu">
-    <meta property="og:description"
-        content="Toate preparatele La Andrei: ingrediente, gramaje și prețuri. Alege shaorma sau kebab și comandă prin Bolt Food.">
+    <meta property="og:description" content="Toate preparatele La Andrei: ingrediente, gramaje și prețuri. Alege shaorma sau kebab și comandă prin Bolt Food.">
     <!-- SCHEMA:START -->
-    <script
-        type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","name":"La Andrei","servesCuisine":["Shaorma","Kebab"],"address":{"@type":"PostalAddress","streetAddress":"Complex Aida, Bulevardul General Vasile Milea","addressLocality":"Sibiu","addressCountry":"RO"},"hasMap":"https://maps.google.com/?q=45.78860777%2C24.15142839","menu":"https://food.bolt.eu/ro-ro/803-sibiu/p/149394-shaorma-la-andrei/","telephone":"+40767666909"}</script>
-    <!-- SCHEMA:END -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","name":"La Andrei","servesCuisine":["Shaorma","Kebab"],"address":{"@type":"PostalAddress","streetAddress":"Complex Aida, Bulevardul General Vasile Milea","addressLocality":"Sibiu","addressCountry":"RO"},"hasMap":"https://maps.google.com/?q=45.78860777%2C24.15142839","menu":"https://food.bolt.eu/ro-ro/803-sibiu/p/149394-shaorma-la-andrei/","telephone":"+40767666909"}</script>
+<!-- SCHEMA:END -->
     <script src="navbar.js" defer></script>
 </head>
-
 <body>
     <a class="skip-link" href="#continut">Sari la conținut</a>
     <header class="site-header">
         <div class="container header-inner">
             <a class="brand" href="index.html" aria-label="La Andrei — acasă">
-                <img class="topbar-logo" src="assets/la-andrei-logo.png" alt="La Andrei — Shaorma & Kebab" width="1760"
-                    height="888">
+                <img class="topbar-logo" src="assets/la-andrei-logo.png" alt="La Andrei — Shaorma & Kebab" width="1760" height="888">
             </a>
-            <button class="menu-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false"
-                aria-label="Deschide meniul">
+            <button class="menu-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false" aria-label="Deschide meniul">
                 <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
             </button>
             <nav id="primary-navigation" class="topbar-items" aria-label="Navigare principală">
@@ -41,323 +34,80 @@
                 <div><a data-nav="reviews" href="index.html#recenzii">Recenzii</a></div>
                 <div><a data-nav="contact" href="contact.html">Contact & locație</a></div>
             </nav>
-            <a class="button button-primary bolt-link header-order" data-business-link="bolt"
-                href="https://food.bolt.eu/ro-ro/803-sibiu/p/149394-shaorma-la-andrei/" target="_blank"
-                rel="noopener noreferrer">
-                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
-                    aria-hidden="true">
-                    <path d="M5 7h14l1 14H4L5 7Z" />
-                    <path d="M8 8V6a4 4 0 0 1 8 0v2" />
-                </svg>
+            <a class="button button-primary bolt-link header-order" data-business-link="bolt" href="https://food.bolt.eu/ro-ro/803-sibiu/p/149394-shaorma-la-andrei/" target="_blank" rel="noopener noreferrer">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/></svg>
                 <span class="order-full">Comandă pe Bolt Food</span><span class="order-short">Comandă</span>
             </a>
         </div>
     </header>
 
-    <main id="continut" class="inner-page">
-        <section class="page-intro" aria-labelledby="menu-page-title">
-            <div class="container">
-                <p class="breadcrumbs"><a href="index.html">Acasă</a><span aria-hidden="true">/</span>Meniu</p>
-                <p class="eyebrow">Shaorma & kebab · Sibiu</p>
-                <h1 id="menu-page-title">Meniul <span>La Andrei.</span></h1>
-                <p class="page-description">În lipie sau la farfurie? Alege un preparat pentru ingrediente, gramaj și
-                    preț.</p>
-            </div>
-        </section>
-        <section class="menu-section section-space" id="meniu" aria-label="Toate preparatele">
-            <div class="container">
-                <div class="menu-filters" role="group" aria-label="Filtrează meniul"><button
-                        class="filter-button is-active" type="button" data-filter="all" aria-pressed="true"
-                        aria-controls="menu-grid">Toate</button><button class="filter-button" type="button"
-                        data-filter="shaorma" aria-pressed="false" aria-controls="menu-grid">Shaorma</button><button
-                        class="filter-button" type="button" data-filter="farfurie" aria-pressed="false"
-                        aria-controls="menu-grid">La farfurie</button></div>
-                <div class="menu-grid" id="menu-grid">
-                    <article class="food-card" data-category="shaorma" data-product-id="shaorma-mare"
-                        data-dialog-id="product-shaorma-mare">
-                        <div class="food-image"><a class="food-photo-trigger" href="#ingredients-shaorma-mare"
-                                data-product-dialog="product-shaorma-mare" aria-haspopup="dialog"
-                                aria-controls="product-shaorma-mare" aria-label="Detalii despre Shaorma mare"><img
-                                    src="assets/real-shawarma-large.jpg"
-                                    alt="Shaorma mare în lipie rumenită, cu carne, cartofi și legume" width="1200"
-                                    height="675" loading="lazy" decoding="async"></a><span
-                                class="food-badge">Populară</span></div>
-                        <div class="food-content">
-                            <p class="food-category">Shaorma <span>·</span> 700 g</p>
-                            <h3><a href="#ingredients-shaorma-mare" data-product-dialog="product-shaorma-mare"
-                                    aria-haspopup="dialog" aria-controls="product-shaorma-mare">Shaorma mare</a></h3>
-                            <p class="food-description">Carne, cartofi, legume și sosuri, într-o lipie pe măsura poftei.
-                            </p>
-                            <details class="food-ingredients" id="ingredients-shaorma-mare">
-                                <summary>Ingrediente</summary>
-                                <p>Lipie, Cartofi, Carne de pui, Sos picant, Maioneză, Usturoi, Tzatziki, Sos cocktail,
-                                    Curry, Ketchup, Varză, Castraveți murați, Ardei, Roșii, Ceapă.</p>
-                            </details><button class="food-details-button" type="button"
-                                data-product-dialog="product-shaorma-mare" aria-haspopup="dialog"
-                                aria-controls="product-shaorma-mare">Ingrediente și gramaj</button>
-                            <div class="food-bottom">
-                                <p class="food-price">36 <span>lei</span></p><a class="food-order bolt-link"
-                                    href="https://food.bolt.eu/ro-ro/803-sibiu/p/149394-shaorma-la-andrei/"
-                                    target="_blank" rel="noopener noreferrer"
-                                    aria-label="Comandă shaorma mare pe Bolt Food">Comandă <svg class="icon"
-                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
-                                        aria-hidden="true">
-                                        <path d="M5 7h14l1 14H4L5 7Z" />
-                                        <path d="M8 8V6a4 4 0 0 1 8 0v2" />
-                                    </svg></a>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="food-card" data-category="farfurie" data-product-id="kebab-farfurie"
-                        data-dialog-id="product-kebab-farfurie">
-                        <div class="food-image"><a class="food-photo-trigger" href="#ingredients-kebab-farfurie"
-                                data-product-dialog="product-kebab-farfurie" aria-haspopup="dialog"
-                                aria-controls="product-kebab-farfurie"
-                                aria-label="Detalii despre Kebab la farfurie"><img src="assets/real-kebab-plate.jpg"
-                                    alt="Kebab la farfurie cu carne, cartofi prăjiți, salată și sosuri" width="1200"
-                                    height="675" loading="lazy" decoding="async"></a><span class="food-badge">La
-                                farfurie</span></div>
-                        <div class="food-content">
-                            <p class="food-category">La farfurie <span>·</span> 700 g</p>
-                            <h3><a href="#ingredients-kebab-farfurie" data-product-dialog="product-kebab-farfurie"
-                                    aria-haspopup="dialog" aria-controls="product-kebab-farfurie">Kebab la farfurie</a>
-                            </h3>
-                            <p class="food-description">Tot gustul de kebab: carne, cartofi, legume și sosuri, la
-                                farfurie.</p>
-                            <details class="food-ingredients" id="ingredients-kebab-farfurie">
-                                <summary>Ingrediente</summary>
-                                <p>Lipie, Cartofi, Carne de pui, Sos picant, Maioneză, Usturoi, Tzatziki, Sos cocktail,
-                                    Curry, Ketchup, Varză, Castraveți murați, Ardei, Roșii, Ceapă.</p>
-                            </details><button class="food-details-button" type="button"
-                                data-product-dialog="product-kebab-farfurie" aria-haspopup="dialog"
-                                aria-controls="product-kebab-farfurie">Ingrediente și gramaj</button>
-                            <div class="food-bottom">
-                                <p class="food-price">42 <span>lei</span></p><a class="food-order bolt-link"
-                                    href="https://food.bolt.eu/ro-ro/803-sibiu/p/149394-shaorma-la-andrei/"
-                                    target="_blank" rel="noopener noreferrer"
-                                    aria-label="Comandă kebab la farfurie pe Bolt Food">Comandă <svg class="icon"
-                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
-                                        aria-hidden="true">
-                                        <path d="M5 7h14l1 14H4L5 7Z" />
-                                        <path d="M8 8V6a4 4 0 0 1 8 0v2" />
-                                    </svg></a>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="food-card" data-category="shaorma" data-product-id="shaorma-medie"
-                        data-dialog-id="product-shaorma-medie">
-                        <div class="food-image"><a class="food-photo-trigger" href="#ingredients-shaorma-medie"
-                                data-product-dialog="product-shaorma-medie" aria-haspopup="dialog"
-                                aria-controls="product-shaorma-medie" aria-label="Detalii despre Shaorma medie"><img
-                                    src="assets/real-shawarma-medium.jpg"
-                                    alt="Shaorma cu carne, varză, salată și sosuri" width="1200" height="675"
-                                    loading="lazy" decoding="async"></a></div>
-                        <div class="food-content">
-                            <p class="food-category">Shaorma <span>·</span> 450 g</p>
-                            <h3><a href="#ingredients-shaorma-medie" data-product-dialog="product-shaorma-medie"
-                                    aria-haspopup="dialog" aria-controls="product-shaorma-medie">Shaorma medie</a></h3>
-                            <p class="food-description">Același gust bun, într-o porție numai bună pentru o pauză de
-                                masă.</p>
-                            <details class="food-ingredients" id="ingredients-shaorma-medie">
-                                <summary>Ingrediente</summary>
-                                <p>Lipie, Cartofi, Carne de pui, Sos picant, Maioneză, Usturoi, Tzatziki, Sos cocktail,
-                                    Curry, Ketchup, Varză, Castraveți murați, Ardei, Roșii, Ceapă.</p>
-                            </details><button class="food-details-button" type="button"
-                                data-product-dialog="product-shaorma-medie" aria-haspopup="dialog"
-                                aria-controls="product-shaorma-medie">Ingrediente și gramaj</button>
-                            <div class="food-bottom">
-                                <p class="food-price">31 <span>lei</span></p><a class="food-order bolt-link"
-                                    href="https://food.bolt.eu/ro-ro/803-sibiu/p/149394-shaorma-la-andrei/"
-                                    target="_blank" rel="noopener noreferrer"
-                                    aria-label="Comandă shaorma medie pe Bolt Food">Comandă <svg class="icon"
-                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
-                                        aria-hidden="true">
-                                        <path d="M5 7h14l1 14H4L5 7Z" />
-                                        <path d="M8 8V6a4 4 0 0 1 8 0v2" />
-                                    </svg></a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                <p class="visually-hidden" id="filter-status" role="status" aria-live="polite"></p>
-                <dialog class="product-dialog" id="product-shaorma-mare" aria-labelledby="product-title-shaorma-mare">
-                    <div class="product-dialog-panel">
-                        <form method="dialog" class="product-dialog-close"><button type="submit"
-                                aria-label="Închide detaliile preparatului" autofocus><svg class="icon"
-                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                    aria-hidden="true">
-                                    <path d="m6 6 12 12M18 6 6 18" />
-                                </svg></button></form>
-                        <div class="product-dialog-hero">
-                            <div class="product-dialog-photo"><img class="product-dialog-image"
-                                    src="assets/real-shawarma-large.jpg"
-                                    alt="Shaorma mare în lipie rumenită, cu carne, cartofi și legume" width="1200"
-                                    height="675" loading="lazy"></div>
-                            <div class="product-dialog-heading">
-                                <p class="eyebrow">Shaorma</p>
-                                <h2 id="product-title-shaorma-mare">Shaorma mare</h2>
-                            </div>
-                        </div>
-                        <div class="product-dialog-copy">
-                            <div class="product-dialog-details">
-                                <div class="product-dialog-facts"><span>Porție: <strong>700 g</strong></span><span
-                                        class="food-price">36 <span>lei</span></span></div>
-                                <p class="product-dialog-description">Carne, cartofi, legume și sosuri, într-o lipie pe
-                                    măsura poftei.</p>
-                                <h3>Ingrediente</h3>
-                                <ul class="product-ingredient-list">
-                                    <li>Lipie</li>
-                                    <li>Cartofi</li>
-                                    <li>Carne de pui</li>
-                                    <li>Sos picant</li>
-                                    <li>Maioneză</li>
-                                    <li>Usturoi</li>
-                                    <li>Tzatziki</li>
-                                    <li>Sos cocktail</li>
-                                    <li>Curry</li>
-                                    <li>Ketchup</li>
-                                    <li>Varză</li>
-                                    <li>Castraveți murați</li>
-                                    <li>Ardei</li>
-                                    <li>Roșii</li>
-                                    <li>Ceapă</li>
-                                </ul>
-                                <p class="product-dialog-note">Pentru detalii despre ingrediente și alergeni, <a
-                                        href="contact.html">contactează restaurantul</a>.</p>
-                            </div>
-                            <div class="product-dialog-order"><a class="button button-primary bolt-link"
-                                    href="https://food.bolt.eu/ro-ro/803-sibiu/p/149394-shaorma-la-andrei/"
-                                    target="_blank" rel="noopener noreferrer">Comandă pe Bolt Food</a></div>
-                        </div>
-                    </div>
-                </dialog>
-                <dialog class="product-dialog" id="product-kebab-farfurie"
-                    aria-labelledby="product-title-kebab-farfurie">
-                    <div class="product-dialog-panel">
-                        <form method="dialog" class="product-dialog-close"><button type="submit"
-                                aria-label="Închide detaliile preparatului" autofocus><svg class="icon"
-                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                    aria-hidden="true">
-                                    <path d="m6 6 12 12M18 6 6 18" />
-                                </svg></button></form>
-                        <div class="product-dialog-hero">
-                            <div class="product-dialog-photo"><img class="product-dialog-image"
-                                    src="assets/real-kebab-plate.jpg"
-                                    alt="Kebab la farfurie cu carne, cartofi prăjiți, salată și sosuri" width="1200"
-                                    height="675" loading="lazy"></div>
-                            <div class="product-dialog-heading">
-                                <p class="eyebrow">La farfurie</p>
-                                <h2 id="product-title-kebab-farfurie">Kebab la farfurie</h2>
-                            </div>
-                        </div>
-                        <div class="product-dialog-copy">
-                            <div class="product-dialog-details">
-                                <div class="product-dialog-facts"><span>Porție: <strong>700 g</strong></span><span
-                                        class="food-price">42 <span>lei</span></span></div>
-                                <p class="product-dialog-description">Tot gustul de kebab: carne, cartofi, legume și
-                                    sosuri, la farfurie.</p>
-                                <h3>Ingrediente</h3>
-                                <ul class="product-ingredient-list">
-                                    <li>Lipie</li>
-                                    <li>Cartofi</li>
-                                    <li>Carne de pui</li>
-                                    <li>Sos picant</li>
-                                    <li>Maioneză</li>
-                                    <li>Usturoi</li>
-                                    <li>Tzatziki</li>
-                                    <li>Sos cocktail</li>
-                                    <li>Curry</li>
-                                    <li>Ketchup</li>
-                                    <li>Varză</li>
-                                    <li>Castraveți murați</li>
-                                    <li>Ardei</li>
-                                    <li>Roșii</li>
-                                    <li>Ceapă</li>
-                                </ul>
-                                <p class="product-dialog-note">Pentru detalii despre ingrediente și alergeni, <a
-                                        href="contact.html">contactează restaurantul</a>.</p>
-                            </div>
-                            <div class="product-dialog-order"><a class="button button-primary bolt-link"
-                                    href="https://food.bolt.eu/ro-ro/803-sibiu/p/149394-shaorma-la-andrei/"
-                                    target="_blank" rel="noopener noreferrer">Comandă pe Bolt Food</a></div>
-                        </div>
-                    </div>
-                </dialog>
-                <dialog class="product-dialog" id="product-shaorma-medie" aria-labelledby="product-title-shaorma-medie">
-                    <div class="product-dialog-panel">
-                        <form method="dialog" class="product-dialog-close"><button type="submit"
-                                aria-label="Închide detaliile preparatului" autofocus><svg class="icon"
-                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                    aria-hidden="true">
-                                    <path d="m6 6 12 12M18 6 6 18" />
-                                </svg></button></form>
-                        <div class="product-dialog-hero">
-                            <div class="product-dialog-photo"><img class="product-dialog-image"
-                                    src="assets/real-shawarma-medium.jpg"
-                                    alt="Shaorma cu carne, varză, salată și sosuri" width="1200" height="675"
-                                    loading="lazy"></div>
-                            <div class="product-dialog-heading">
-                                <p class="eyebrow">Shaorma</p>
-                                <h2 id="product-title-shaorma-medie">Shaorma medie</h2>
-                            </div>
-                        </div>
-                        <div class="product-dialog-copy">
-                            <div class="product-dialog-details">
-                                <div class="product-dialog-facts"><span>Porție: <strong>450 g</strong></span><span
-                                        class="food-price">31 <span>lei</span></span></div>
-                                <p class="product-dialog-description">Același gust bun, într-o porție numai bună pentru
-                                    o pauză de masă.</p>
-                                <h3>Ingrediente</h3>
-                                <ul class="product-ingredient-list">
-                                    <li>Lipie</li>
-                                    <li>Cartofi</li>
-                                    <li>Carne de pui</li>
-                                    <li>Sos picant</li>
-                                    <li>Maioneză</li>
-                                    <li>Usturoi</li>
-                                    <li>Tzatziki</li>
-                                    <li>Sos cocktail</li>
-                                    <li>Curry</li>
-                                    <li>Ketchup</li>
-                                    <li>Varză</li>
-                                    <li>Castraveți murați</li>
-                                    <li>Ardei</li>
-                                    <li>Roșii</li>
-                                    <li>Ceapă</li>
-                                </ul>
-                                <p class="product-dialog-note">Pentru detalii despre ingrediente și alergeni, <a
-                                        href="contact.html">contactează restaurantul</a>.</p>
-                            </div>
-                            <div class="product-dialog-order"><a class="button button-primary bolt-link"
-                                    href="https://food.bolt.eu/ro-ro/803-sibiu/p/149394-shaorma-la-andrei/"
-                                    target="_blank" rel="noopener noreferrer">Comandă pe Bolt Food</a></div>
-                        </div>
-                    </div>
-                </dialog>
-                <p class="menu-ingredient-note">Ai întrebări despre ingrediente sau alergeni? <a
-                        href="contact.html">Contactează restaurantul.</a></p>
-                <div class="menu-footer">
-                    <p>Ți-ai ales preferatul?</p><a class="text-link bolt-link"
-                        href="https://food.bolt.eu/ro-ro/803-sibiu/p/149394-shaorma-la-andrei/" target="_blank"
-                        rel="noopener noreferrer">Comandă pe Bolt Food</a>
-                </div>
-            </div>
-        </section>
-    </main>
+    <main id="continut" class="inner-page"><section class="page-intro" aria-labelledby="menu-page-title"><div class="container"><p class="breadcrumbs"><a href="index.html">Acasă</a><span aria-hidden="true">/</span>Meniu</p><p class="eyebrow">Shaorma & kebab · Sibiu</p><h1 id="menu-page-title">Meniul <span>La Andrei.</span></h1><p class="page-description">În lipie sau la farfurie? Alege un preparat pentru ingrediente, gramaj și preț.</p></div></section><section class="menu-section section-space" id="meniu" aria-label="Toate preparatele"><div class="container"><div class="menu-filters" role="group" aria-label="Filtrează meniul"><button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true" aria-controls="menu-grid">Toate</button><button class="filter-button" type="button" data-filter="shaorma" aria-pressed="false" aria-controls="menu-grid">Shaorma</button><button class="filter-button" type="button" data-filter="farfurie" aria-pressed="false" aria-controls="menu-grid">La farfurie</button><button class="filter-button" type="button" data-filter="kebab" aria-pressed="false" aria-controls="menu-grid">Kebab</button><button class="filter-button" type="button" data-filter="extra" aria-pressed="false" aria-controls="menu-grid">Garnituri</button><button class="filter-button" type="button" data-filter="bauturi" aria-pressed="false" aria-controls="menu-grid">Băuturi</button></div>
+<div class="menu-grid" id="menu-grid">
+<article class="food-card" data-category="shaorma" data-product-id="shaorma-mare" data-dialog-id="product-shaorma-mare">
+<div class="food-image"><a class="food-photo-trigger" href="#ingredients-shaorma-mare" data-product-dialog="product-shaorma-mare" aria-haspopup="dialog" aria-controls="product-shaorma-mare" aria-label="Detalii despre Shaorma mare"><img src="assets/real-shawarma-large.jpg" alt="Shaorma mare în lipie rumenită, cu carne, cartofi și legume" width="1200" height="675" loading="lazy" decoding="async"></a><span class="food-badge">Populară</span></div>
+<div class="food-content"><p class="food-category">Shaorma <span>·</span> 700 g</p><h3><a href="#ingredients-shaorma-mare" data-product-dialog="product-shaorma-mare" aria-haspopup="dialog" aria-controls="product-shaorma-mare">Shaorma mare</a></h3><p class="food-description">Carne, cartofi, legume și sosuri, într-o lipie pe măsura poftei.</p><details class="food-ingredients" id="ingredients-shaorma-mare"><summary>Ingrediente</summary><p>Lipie, Cartofi, Carne de pui, Sos picant, Maioneză, Usturoi, Tzatziki, Sos cocktail, Curry, Ketchup, Varză, Castraveți murați, Ardei, Roșii, Ceapă.</p></details><button class="food-details-button" type="button" data-product-dialog="product-shaorma-mare" aria-haspopup="dialog" aria-controls="product-shaorma-mare">Ingrediente și gramaj</button><div class="food-bottom"><p class="food-price">36 <span>lei</span></p><a class="food-order bolt-link" href="https://food.bolt.eu/ro-ro/803-sibiu/p/149394-shaorma-la-andrei/" target="_blank" rel="noopener noreferrer" aria-label="Comandă shaorma mare pe Bolt Food">Comandă <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/></svg></a></div></div></article>
+<article class="food-card" data-category="farfurie" data-product-id="kebab-farfurie" data-dialog-id="product-kebab-farfurie">
+<div class="food-image"><a class="food-photo-trigger" href="#ingredients-kebab-farfurie" data-product-dialog="product-kebab-farfurie" aria-haspopup="dialog" aria-controls="product-kebab-farfurie" aria-label="Detalii despre Kebab la farfurie"><img src="assets/real-kebab-plate.jpg" alt="Kebab la farfurie cu carne, cartofi prăjiți, salată și sosuri" width="1200" height="675" loading="lazy" decoding="async"></a><span class="food-badge">La farfurie</span></div>
+<div class="food-content"><p class="food-category">La farfurie <span>·</span> 700 g</p><h3><a href="#ingredients-kebab-farfurie" data-product-dialog="product-kebab-farfurie" aria-haspopup="dialog" aria-controls="product-kebab-farfurie">Kebab la farfurie</a></h3><p class="food-description">Tot gustul de kebab: carne, cartofi, legume și sosuri, la farfurie.</p><details class="food-ingredients" id="ingredients-kebab-farfurie"><summary>Ingrediente</summary><p>Lipie, Cartofi, Carne de pui, Sos picant, Maioneză, Usturoi, Tzatziki, Sos cocktail, Curry, Ketchup, Varză, Castraveți murați, Ardei, Roșii, Ceapă.</p></details><button class="food-details-button" type="button" data-product-dialog="product-kebab-farfurie" aria-haspopup="dialog" aria-controls="product-kebab-farfurie">Ingrediente și gramaj</button><div class="food-bottom"><p class="food-price">42 <span>lei</span></p><a class="food-order bolt-link" href="https://food.bolt.eu/ro-ro/803-sibiu/p/149394-shaorma-la-andrei/" target="_blank" rel="noopener noreferrer" aria-label="Comandă kebab la farfurie pe Bolt Food">Comandă <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/></svg></a></div></div></article>
+<article class="food-card" data-category="shaorma" data-product-id="shaorma-medie" data-dialog-id="product-shaorma-medie">
+<div class="food-image"><a class="food-photo-trigger" href="#ingredients-shaorma-medie" data-product-dialog="product-shaorma-medie" aria-haspopup="dialog" aria-controls="product-shaorma-medie" aria-label="Detalii despre Shaorma medie"><img src="assets/real-shawarma-medium.jpg" alt="Shaorma cu carne, varză, salată și sosuri" width="1200" height="675" loading="lazy" decoding="async"></a></div>
+<div class="food-content"><p class="food-category">Shaorma <span>·</span> 450 g</p><h3><a href="#ingredients-shaorma-medie" data-product-dialog="product-shaorma-medie" aria-haspopup="dialog" aria-controls="product-shaorma-medie">Shaorma medie</a></h3><p class="food-description">Același gust bun, într-o porție numai bună pentru o pauză de masă.</p><details class="food-ingredients" id="ingredients-shaorma-medie"><summary>Ingrediente</summary><p>Lipie, Cartofi, Carne de pui, Sos picant, Maioneză, Usturoi, Tzatziki, Sos cocktail, Curry, Ketchup, Varză, Castraveți murați, Ardei, Roșii, Ceapă.</p></details><button class="food-details-button" type="button" data-product-dialog="product-shaorma-medie" aria-haspopup="dialog" aria-controls="product-shaorma-medie">Ingrediente și gramaj</button><div class="food-bottom"><p class="food-price">31 <span>lei</span></p><a class="food-order bolt-link" href="https://food.bolt.eu/ro-ro/803-sibiu/p/149394-shaorma-la-andrei/" target="_blank" rel="noopener noreferrer" aria-label="Comandă shaorma medie pe Bolt Food">Comandă <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/></svg></a></div></div></article>
+<article class="food-card" data-category="shaorma" data-product-id="shaorma-mica" data-dialog-id="product-shaorma-mica">
+<div class="food-image"><a class="food-photo-trigger" href="#ingredients-shaorma-mica" data-product-dialog="product-shaorma-mica" aria-haspopup="dialog" aria-controls="product-shaorma-mica" aria-label="Detalii despre Shaorma mică"><img src="assets/real-shawarma-small.jpg" alt="Shaorma mică" width="1200" height="675" loading="lazy" decoding="async"></a></div>
+<div class="food-content"><p class="food-category">Shaorma <span>·</span> 250 g</p><h3><a href="#ingredients-shaorma-mica" data-product-dialog="product-shaorma-mica" aria-haspopup="dialog" aria-controls="product-shaorma-mica">Shaorma mică</a></h3><p class="food-description">Shaorma cu pui, cartofi, legume și sosuri, în lipie.</p><details class="food-ingredients" id="ingredients-shaorma-mica"><summary>Ingrediente</summary><p>Lipie, Cartofi, Carne de pui, Sos picant, Maioneză, Usturoi, Tzatziki, Sos cocktail, Curry, Ketchup, Varză, Castraveți murați, Ardei, Roșii, Ceapă.</p></details><button class="food-details-button" type="button" data-product-dialog="product-shaorma-mica" aria-haspopup="dialog" aria-controls="product-shaorma-mica">Ingrediente și gramaj</button><div class="food-bottom"><p class="food-price">25 <span>lei</span></p><a class="food-order bolt-link" href="https://food.bolt.eu/ro-ro/803-sibiu/p/149394-shaorma-la-andrei/" target="_blank" rel="noopener noreferrer" aria-label="Comandă shaorma mică pe Bolt Food">Comandă <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/></svg></a></div></div></article>
+<article class="food-card" data-category="kebab" data-product-id="kebab-mic" data-dialog-id="product-kebab-mic">
+<div class="food-image"><a class="food-photo-trigger" href="#ingredients-kebab-mic" data-product-dialog="product-kebab-mic" aria-haspopup="dialog" aria-controls="product-kebab-mic" aria-label="Detalii despre Kebab mic"><img src="assets/real-kebab-small.jpg" alt="Kebab mic" width="1200" height="675" loading="lazy" decoding="async"></a></div>
+<div class="food-content"><p class="food-category">Kebab <span>·</span> 300 g</p><h3><a href="#ingredients-kebab-mic" data-product-dialog="product-kebab-mic" aria-haspopup="dialog" aria-controls="product-kebab-mic">Kebab mic</a></h3><p class="food-description">Kebab în chiflă, cu pui, cartofi, legume și sosuri.</p><details class="food-ingredients" id="ingredients-kebab-mic"><summary>Ingrediente</summary><p>Chiflă, Cartofi, Carne de pui, Sos picant, Maioneză, Usturoi, Tzatziki, Sos cocktail, Curry, Ketchup, Varză, Castraveți murați, Ardei, Roșii, Ceapă.</p></details><button class="food-details-button" type="button" data-product-dialog="product-kebab-mic" aria-haspopup="dialog" aria-controls="product-kebab-mic">Ingrediente și gramaj</button><div class="food-bottom"><p class="food-price">25 <span>lei</span></p><a class="food-order bolt-link" href="https://food.bolt.eu/ro-ro/803-sibiu/p/149394-shaorma-la-andrei/" target="_blank" rel="noopener noreferrer" aria-label="Comandă kebab mic pe Bolt Food">Comandă <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/></svg></a></div></div></article>
+<article class="food-card" data-category="farfurie" data-product-id="kebab-mic-farfurie" data-dialog-id="product-kebab-mic-farfurie">
+<div class="food-image"><a class="food-photo-trigger" href="#ingredients-kebab-mic-farfurie" data-product-dialog="product-kebab-mic-farfurie" aria-haspopup="dialog" aria-controls="product-kebab-mic-farfurie" aria-label="Detalii despre Kebab mic la farfurie"><img src="assets/real-kebab-small-plate.jpg" alt="Kebab mic la farfurie" width="1200" height="675" loading="lazy" decoding="async"></a></div>
+<div class="food-content"><p class="food-category">La farfurie <span>·</span> 350 g</p><h3><a href="#ingredients-kebab-mic-farfurie" data-product-dialog="product-kebab-mic-farfurie" aria-haspopup="dialog" aria-controls="product-kebab-mic-farfurie">Kebab mic la farfurie</a></h3><p class="food-description">Kebab cu pui, cartofi, lipie, legume și sosuri, la farfurie.</p><details class="food-ingredients" id="ingredients-kebab-mic-farfurie"><summary>Ingrediente</summary><p>Lipie, Cartofi, Carne de pui, Sos picant, Maioneză, Usturoi, Tzatziki, Sos cocktail, Curry, Ketchup, Varză, Castraveți murați, Roșii, Ceapă.</p></details><button class="food-details-button" type="button" data-product-dialog="product-kebab-mic-farfurie" aria-haspopup="dialog" aria-controls="product-kebab-mic-farfurie">Ingrediente și gramaj</button><div class="food-bottom"><p class="food-price">36 <span>lei</span></p><a class="food-order bolt-link" href="https://food.bolt.eu/ro-ro/803-sibiu/p/149394-shaorma-la-andrei/" target="_blank" rel="noopener noreferrer" aria-label="Comandă kebab mic la farfurie pe Bolt Food">Comandă <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/></svg></a></div></div></article>
+<article class="food-card" data-category="kebab" data-product-id="kebab-box" data-dialog-id="product-kebab-box">
+<div class="food-image"><a class="food-photo-trigger" href="#ingredients-kebab-box" data-product-dialog="product-kebab-box" aria-haspopup="dialog" aria-controls="product-kebab-box" aria-label="Detalii despre Kebab box"><img src="assets/la-andrei-logo.png" alt="La Andrei — Shaorma &amp; Kebab" width="1200" height="675" loading="lazy" decoding="async"></a></div>
+<div class="food-content"><p class="food-category">Kebab <span>·</span> 200 g</p><h3><a href="#ingredients-kebab-box" data-product-dialog="product-kebab-box" aria-haspopup="dialog" aria-controls="product-kebab-box">Kebab box</a></h3><p class="food-description">Carne de pui, cartofi și sosuri, la box.</p><details class="food-ingredients" id="ingredients-kebab-box"><summary>Ingrediente</summary><p>Carne de pui, Cartofi, Sosuri.</p></details><button class="food-details-button" type="button" data-product-dialog="product-kebab-box" aria-haspopup="dialog" aria-controls="product-kebab-box">Ingrediente și gramaj</button><div class="food-bottom"><p class="food-price">20 <span>lei</span></p><a class="food-order bolt-link" href="https://food.bolt.eu/ro-ro/803-sibiu/p/149394-shaorma-la-andrei/" target="_blank" rel="noopener noreferrer" aria-label="Comandă kebab box pe Bolt Food">Comandă <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/></svg></a></div></div></article>
+<article class="food-card" data-category="extra" data-product-id="cartofi-sosuri" data-dialog-id="product-cartofi-sosuri">
+<div class="food-image"><a class="food-photo-trigger" href="#ingredients-cartofi-sosuri" data-product-dialog="product-cartofi-sosuri" aria-haspopup="dialog" aria-controls="product-cartofi-sosuri" aria-label="Detalii despre Cartofi prăjiți cu sosuri"><img src="assets/real-fries-sauces.jpg" alt="Cartofi prăjiți cu sosuri" width="1200" height="675" loading="lazy" decoding="async"></a></div>
+<div class="food-content"><p class="food-category">Garnituri <span>·</span> Gramaj de confirmat</p><h3><a href="#ingredients-cartofi-sosuri" data-product-dialog="product-cartofi-sosuri" aria-haspopup="dialog" aria-controls="product-cartofi-sosuri">Cartofi prăjiți cu sosuri</a></h3><p class="food-description">Cartofi prăjiți cu sosuri. Gramajul se confirmă la restaurant.</p><details class="food-ingredients" id="ingredients-cartofi-sosuri"><summary>Ingrediente</summary><p>Cartofi prăjiți, Sosuri.</p></details><button class="food-details-button" type="button" data-product-dialog="product-cartofi-sosuri" aria-haspopup="dialog" aria-controls="product-cartofi-sosuri">Ingrediente și gramaj</button><div class="food-bottom"><p class="food-price">12 <span>lei</span></p><a class="food-order bolt-link" href="https://food.bolt.eu/ro-ro/803-sibiu/p/149394-shaorma-la-andrei/" target="_blank" rel="noopener noreferrer" aria-label="Comandă cartofi prăjiți cu sosuri pe Bolt Food">Comandă <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/></svg></a></div></div></article>
+<article class="food-card" data-category="extra" data-product-id="cartofi-salata" data-dialog-id="product-cartofi-salata">
+<div class="food-image"><a class="food-photo-trigger" href="#ingredients-cartofi-salata" data-product-dialog="product-cartofi-salata" aria-haspopup="dialog" aria-controls="product-cartofi-salata" aria-label="Detalii despre Cartofi prăjiți și salată cu sosuri"><img src="assets/real-fries-salad.jpg" alt="Cartofi prăjiți și salată cu sosuri" width="1200" height="675" loading="lazy" decoding="async"></a></div>
+<div class="food-content"><p class="food-category">Garnituri <span>·</span> 300 g</p><h3><a href="#ingredients-cartofi-salata" data-product-dialog="product-cartofi-salata" aria-haspopup="dialog" aria-controls="product-cartofi-salata">Cartofi prăjiți și salată cu sosuri</a></h3><p class="food-description">Cartofi prăjiți, salată și sosuri.</p><details class="food-ingredients" id="ingredients-cartofi-salata"><summary>Ingrediente</summary><p>Cartofi prăjiți, Salată, Sosuri.</p></details><button class="food-details-button" type="button" data-product-dialog="product-cartofi-salata" aria-haspopup="dialog" aria-controls="product-cartofi-salata">Ingrediente și gramaj</button><div class="food-bottom"><p class="food-price">20 <span>lei</span></p><a class="food-order bolt-link" href="https://food.bolt.eu/ro-ro/803-sibiu/p/149394-shaorma-la-andrei/" target="_blank" rel="noopener noreferrer" aria-label="Comandă cartofi prăjiți și salată cu sosuri pe Bolt Food">Comandă <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/></svg></a></div></div></article>
+<article class="food-card" data-category="bauturi" data-product-id="sprite-330" data-dialog-id="product-sprite-330">
+<div class="food-image"><a class="food-photo-trigger" href="#ingredients-sprite-330" data-product-dialog="product-sprite-330" aria-haspopup="dialog" aria-controls="product-sprite-330" aria-label="Detalii despre Sprite 330 ml"><img src="assets/real-sprite.jpg" alt="Sprite 330 ml" width="1200" height="675" loading="lazy" decoding="async"></a></div>
+<div class="food-content"><p class="food-category">Băuturi <span>·</span> 330 ml</p><h3><a href="#ingredients-sprite-330" data-product-dialog="product-sprite-330" aria-haspopup="dialog" aria-controls="product-sprite-330">Sprite 330 ml</a></h3><p class="food-description">Băutură răcoritoare, 330 ml.</p><details class="food-ingredients" id="ingredients-sprite-330"><summary>Ingrediente</summary><p>Consultă ingredientele de pe ambalaj.</p></details><button class="food-details-button" type="button" data-product-dialog="product-sprite-330" aria-haspopup="dialog" aria-controls="product-sprite-330">Ingrediente și gramaj</button><div class="food-bottom"><p class="food-price">8 <span>lei</span></p><a class="food-order bolt-link" href="https://food.bolt.eu/ro-ro/803-sibiu/p/149394-shaorma-la-andrei/" target="_blank" rel="noopener noreferrer" aria-label="Comandă sprite 330 ml pe Bolt Food">Comandă <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/></svg></a></div></div></article>
+<article class="food-card" data-category="bauturi" data-product-id="cola-330" data-dialog-id="product-cola-330">
+<div class="food-image"><a class="food-photo-trigger" href="#ingredients-cola-330" data-product-dialog="product-cola-330" aria-haspopup="dialog" aria-controls="product-cola-330" aria-label="Detalii despre Coca-Cola 330 ml"><img src="assets/real-cola-330.jpg" alt="Coca-Cola 330 ml" width="1200" height="675" loading="lazy" decoding="async"></a></div>
+<div class="food-content"><p class="food-category">Băuturi <span>·</span> 330 ml</p><h3><a href="#ingredients-cola-330" data-product-dialog="product-cola-330" aria-haspopup="dialog" aria-controls="product-cola-330">Coca-Cola 330 ml</a></h3><p class="food-description">Coca-Cola, 330 ml.</p><details class="food-ingredients" id="ingredients-cola-330"><summary>Ingrediente</summary><p>Consultă ingredientele de pe ambalaj.</p></details><button class="food-details-button" type="button" data-product-dialog="product-cola-330" aria-haspopup="dialog" aria-controls="product-cola-330">Ingrediente și gramaj</button><div class="food-bottom"><p class="food-price">8 <span>lei</span></p><a class="food-order bolt-link" href="https://food.bolt.eu/ro-ro/803-sibiu/p/149394-shaorma-la-andrei/" target="_blank" rel="noopener noreferrer" aria-label="Comandă coca-cola 330 ml pe Bolt Food">Comandă <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/></svg></a></div></div></article>
+<article class="food-card" data-category="bauturi" data-product-id="cola-500" data-dialog-id="product-cola-500">
+<div class="food-image"><a class="food-photo-trigger" href="#ingredients-cola-500" data-product-dialog="product-cola-500" aria-haspopup="dialog" aria-controls="product-cola-500" aria-label="Detalii despre Coca-Cola 500 ml"><img src="assets/real-cola-500.jpg" alt="Coca-Cola 500 ml" width="1200" height="675" loading="lazy" decoding="async"></a></div>
+<div class="food-content"><p class="food-category">Băuturi <span>·</span> 500 ml</p><h3><a href="#ingredients-cola-500" data-product-dialog="product-cola-500" aria-haspopup="dialog" aria-controls="product-cola-500">Coca-Cola 500 ml</a></h3><p class="food-description">Coca-Cola, 500 ml.</p><details class="food-ingredients" id="ingredients-cola-500"><summary>Ingrediente</summary><p>Consultă ingredientele de pe ambalaj.</p></details><button class="food-details-button" type="button" data-product-dialog="product-cola-500" aria-haspopup="dialog" aria-controls="product-cola-500">Ingrediente și gramaj</button><div class="food-bottom"><p class="food-price">10 <span>lei</span></p><a class="food-order bolt-link" href="https://food.bolt.eu/ro-ro/803-sibiu/p/149394-shaorma-la-andrei/" target="_blank" rel="noopener noreferrer" aria-label="Comandă coca-cola 500 ml pe Bolt Food">Comandă <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/></svg></a></div></div></article>
+<article class="food-card" data-category="bauturi" data-product-id="ayran-250" data-dialog-id="product-ayran-250">
+<div class="food-image"><a class="food-photo-trigger" href="#ingredients-ayran-250" data-product-dialog="product-ayran-250" aria-haspopup="dialog" aria-controls="product-ayran-250" aria-label="Detalii despre Ayran 250 ml"><img src="assets/real-ayran.jpg" alt="Ayran 250 ml" width="1200" height="675" loading="lazy" decoding="async"></a></div>
+<div class="food-content"><p class="food-category">Băuturi <span>·</span> 250 ml</p><h3><a href="#ingredients-ayran-250" data-product-dialog="product-ayran-250" aria-haspopup="dialog" aria-controls="product-ayran-250">Ayran 250 ml</a></h3><p class="food-description">Ayran, 250 ml.</p><details class="food-ingredients" id="ingredients-ayran-250"><summary>Ingrediente</summary><p>Consultă ingredientele de pe ambalaj.</p></details><button class="food-details-button" type="button" data-product-dialog="product-ayran-250" aria-haspopup="dialog" aria-controls="product-ayran-250">Ingrediente și gramaj</button><div class="food-bottom"><p class="food-price">8 <span>lei</span></p><a class="food-order bolt-link" href="https://food.bolt.eu/ro-ro/803-sibiu/p/149394-shaorma-la-andrei/" target="_blank" rel="noopener noreferrer" aria-label="Comandă ayran 250 ml pe Bolt Food">Comandă <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/></svg></a></div></div></article>
+<article class="food-card" data-category="bauturi" data-product-id="xixo-250" data-dialog-id="product-xixo-250">
+<div class="food-image"><a class="food-photo-trigger" href="#ingredients-xixo-250" data-product-dialog="product-xixo-250" aria-haspopup="dialog" aria-controls="product-xixo-250" aria-label="Detalii despre XIXO 250 ml"><img src="assets/real-xixo.jpg" alt="XIXO 250 ml" width="1200" height="675" loading="lazy" decoding="async"></a></div>
+<div class="food-content"><p class="food-category">Băuturi <span>·</span> 250 ml</p><h3><a href="#ingredients-xixo-250" data-product-dialog="product-xixo-250" aria-haspopup="dialog" aria-controls="product-xixo-250">XIXO 250 ml</a></h3><p class="food-description">Băutură răcoritoare XIXO, 250 ml.</p><details class="food-ingredients" id="ingredients-xixo-250"><summary>Ingrediente</summary><p>Consultă ingredientele de pe ambalaj.</p></details><button class="food-details-button" type="button" data-product-dialog="product-xixo-250" aria-haspopup="dialog" aria-controls="product-xixo-250">Ingrediente și gramaj</button><div class="food-bottom"><p class="food-price">5 <span>lei</span></p><a class="food-order bolt-link" href="https://food.bolt.eu/ro-ro/803-sibiu/p/149394-shaorma-la-andrei/" target="_blank" rel="noopener noreferrer" aria-label="Comandă xixo 250 ml pe Bolt Food">Comandă <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/></svg></a></div></div></article>
+</div>
+<p class="visually-hidden" id="filter-status" role="status" aria-live="polite"></p>
+<dialog class="product-dialog" id="product-shaorma-mare" aria-labelledby="product-title-shaorma-mare"><div class="product-dialog-panel"><form method="dialog" class="product-dialog-close"><button type="submit" aria-label="Închide detaliile preparatului" autofocus><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></form><div class="product-dialog-hero"><div class="product-dialog-photo"><img class="product-dialog-image" src="assets/real-shawarma-large.jpg" alt="Shaorma mare în lipie rumenită, cu carne, cartofi și legume" width="1200" height="675" loading="lazy"></div><div class="product-dialog-heading"><p class="eyebrow">Shaorma</p><h2 id="product-title-shaorma-mare">Shaorma mare</h2></div></div><div class="product-dialog-copy"><div class="product-dialog-details"><div class="product-dialog-facts"><span>Porție: <strong>700 g</strong></span><span class="food-price">36 <span>lei</span></span></div><p class="product-dialog-description">Carne, cartofi, legume și sosuri, într-o lipie pe măsura poftei.</p><h3>Ingrediente</h3><ul class="product-ingredient-list"><li>Lipie</li><li>Cartofi</li><li>Carne de pui</li><li>Sos picant</li><li>Maioneză</li><li>Usturoi</li><li>Tzatziki</li><li>Sos cocktail</li><li>Curry</li><li>Ketchup</li><li>Varză</li><li>Castraveți murați</li><li>Ardei</li><li>Roșii</li><li>Ceapă</li></ul><p class="product-dialog-note">Pentru detalii despre ingrediente și alergeni, <a href="contact.html">contactează restaurantul</a>.</p></div><div class="product-dialog-order"><a class="button button-primary bolt-link" href="https://food.bolt.eu/ro-ro/803-sibiu/p/149394-shaorma-la-andrei/" target="_blank" rel="noopener noreferrer">Comandă pe Bolt Food</a></div></div></div></dialog>
+<dialog class="product-dialog" id="product-kebab-farfurie" aria-labelledby="product-title-kebab-farfurie"><div class="product-dialog-panel"><form method="dialog" class="product-dialog-close"><button type="submit" aria-label="Închide detaliile preparatului" autofocus><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></form><div class="product-dialog-hero"><div class="product-dialog-photo"><img class="product-dialog-image" src="assets/real-kebab-plate.jpg" alt="Kebab la farfurie cu carne, cartofi prăjiți, salată și sosuri" width="1200" height="675" loading="lazy"></div><div class="product-dialog-heading"><p class="eyebrow">La farfurie</p><h2 id="product-title-kebab-farfurie">Kebab la farfurie</h2></div></div><div class="product-dialog-copy"><div class="product-dialog-details"><div class="product-dialog-facts"><span>Porție: <strong>700 g</strong></span><span class="food-price">42 <span>lei</span></span></div><p class="product-dialog-description">Tot gustul de kebab: carne, cartofi, legume și sosuri, la farfurie.</p><h3>Ingrediente</h3><ul class="product-ingredient-list"><li>Lipie</li><li>Cartofi</li><li>Carne de pui</li><li>Sos picant</li><li>Maioneză</li><li>Usturoi</li><li>Tzatziki</li><li>Sos cocktail</li><li>Curry</li><li>Ketchup</li><li>Varză</li><li>Castraveți murați</li><li>Ardei</li><li>Roșii</li><li>Ceapă</li></ul><p class="product-dialog-note">Pentru detalii despre ingrediente și alergeni, <a href="contact.html">contactează restaurantul</a>.</p></div><div class="product-dialog-order"><a class="button button-primary bolt-link" href="https://food.bolt.eu/ro-ro/803-sibiu/p/149394-shaorma-la-andrei/" target="_blank" rel="noopener noreferrer">Comandă pe Bolt Food</a></div></div></div></dialog>
+<dialog class="product-dialog" id="product-shaorma-medie" aria-labelledby="product-title-shaorma-medie"><div class="product-dialog-panel"><form method="dialog" class="product-dialog-close"><button type="submit" aria-label="Închide detaliile preparatului" autofocus><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></form><div class="product-dialog-hero"><div class="product-dialog-photo"><img class="product-dialog-image" src="assets/real-shawarma-medium.jpg" alt="Shaorma cu carne, varză, salată și sosuri" width="1200" height="675" loading="lazy"></div><div class="product-dialog-heading"><p class="eyebrow">Shaorma</p><h2 id="product-title-shaorma-medie">Shaorma medie</h2></div></div><div class="product-dialog-copy"><div class="product-dialog-details"><div class="product-dialog-facts"><span>Porție: <strong>450 g</strong></span><span class="food-price">31 <span>lei</span></span></div><p class="product-dialog-description">Același gust bun, într-o porție numai bună pentru o pauză de masă.</p><h3>Ingrediente</h3><ul class="product-ingredient-list"><li>Lipie</li><li>Cartofi</li><li>Carne de pui</li><li>Sos picant</li><li>Maioneză</li><li>Usturoi</li><li>Tzatziki</li><li>Sos cocktail</li><li>Curry</li><li>Ketchup</li><li>Varză</li><li>Castraveți murați</li><li>Ardei</li><li>Roșii</li><li>Ceapă</li></ul><p class="product-dialog-note">Pentru detalii despre ingrediente și alergeni, <a href="contact.html">contactează restaurantul</a>.</p></div><div class="product-dialog-order"><a class="button button-primary bolt-link" href="https://food.bolt.eu/ro-ro/803-sibiu/p/149394-shaorma-la-andrei/" target="_blank" rel="noopener noreferrer">Comandă pe Bolt Food</a></div></div></div></dialog>
+<dialog class="product-dialog" id="product-shaorma-mica" aria-labelledby="product-title-shaorma-mica"><div class="product-dialog-panel"><form method="dialog" class="product-dialog-close"><button type="submit" aria-label="Închide detaliile preparatului" autofocus><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></form><div class="product-dialog-hero"><div class="product-dialog-photo"><img class="product-dialog-image" src="assets/real-shawarma-small.jpg" alt="Shaorma mică" width="1200" height="675" loading="lazy"></div><div class="product-dialog-heading"><p class="eyebrow">Shaorma</p><h2 id="product-title-shaorma-mica">Shaorma mică</h2></div></div><div class="product-dialog-copy"><div class="product-dialog-details"><div class="product-dialog-facts"><span>Porție: <strong>250 g</strong></span><span class="food-price">25 <span>lei</span></span></div><p class="product-dialog-description">Shaorma cu pui, cartofi, legume și sosuri, în lipie.</p><h3>Ingrediente</h3><ul class="product-ingredient-list"><li>Lipie</li><li>Cartofi</li><li>Carne de pui</li><li>Sos picant</li><li>Maioneză</li><li>Usturoi</li><li>Tzatziki</li><li>Sos cocktail</li><li>Curry</li><li>Ketchup</li><li>Varză</li><li>Castraveți murați</li><li>Ardei</li><li>Roșii</li><li>Ceapă</li></ul><p class="product-dialog-note">Pentru detalii despre ingrediente și alergeni, <a href="contact.html">contactează restaurantul</a>.</p></div><div class="product-dialog-order"><a class="button button-primary bolt-link" href="https://food.bolt.eu/ro-ro/803-sibiu/p/149394-shaorma-la-andrei/" target="_blank" rel="noopener noreferrer">Comandă pe Bolt Food</a></div></div></div></dialog>
+<dialog class="product-dialog" id="product-kebab-mic" aria-labelledby="product-title-kebab-mic"><div class="product-dialog-panel"><form method="dialog" class="product-dialog-close"><button type="submit" aria-label="Închide detaliile preparatului" autofocus><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></form><div class="product-dialog-hero"><div class="product-dialog-photo"><img class="product-dialog-image" src="assets/real-kebab-small.jpg" alt="Kebab mic" width="1200" height="675" loading="lazy"></div><div class="product-dialog-heading"><p class="eyebrow">Kebab</p><h2 id="product-title-kebab-mic">Kebab mic</h2></div></div><div class="product-dialog-copy"><div class="product-dialog-details"><div class="product-dialog-facts"><span>Porție: <strong>300 g</strong></span><span class="food-price">25 <span>lei</span></span></div><p class="product-dialog-description">Kebab în chiflă, cu pui, cartofi, legume și sosuri.</p><h3>Ingrediente</h3><ul class="product-ingredient-list"><li>Chiflă</li><li>Cartofi</li><li>Carne de pui</li><li>Sos picant</li><li>Maioneză</li><li>Usturoi</li><li>Tzatziki</li><li>Sos cocktail</li><li>Curry</li><li>Ketchup</li><li>Varză</li><li>Castraveți murați</li><li>Ardei</li><li>Roșii</li><li>Ceapă</li></ul><p class="product-dialog-note">Pentru detalii despre ingrediente și alergeni, <a href="contact.html">contactează restaurantul</a>.</p></div><div class="product-dialog-order"><a class="button button-primary bolt-link" href="https://food.bolt.eu/ro-ro/803-sibiu/p/149394-shaorma-la-andrei/" target="_blank" rel="noopener noreferrer">Comandă pe Bolt Food</a></div></div></div></dialog>
+<dialog class="product-dialog" id="product-kebab-mic-farfurie" aria-labelledby="product-title-kebab-mic-farfurie"><div class="product-dialog-panel"><form method="dialog" class="product-dialog-close"><button type="submit" aria-label="Închide detaliile preparatului" autofocus><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></form><div class="product-dialog-hero"><div class="product-dialog-photo"><img class="product-dialog-image" src="assets/real-kebab-small-plate.jpg" alt="Kebab mic la farfurie" width="1200" height="675" loading="lazy"></div><div class="product-dialog-heading"><p class="eyebrow">La farfurie</p><h2 id="product-title-kebab-mic-farfurie">Kebab mic la farfurie</h2></div></div><div class="product-dialog-copy"><div class="product-dialog-details"><div class="product-dialog-facts"><span>Porție: <strong>350 g</strong></span><span class="food-price">36 <span>lei</span></span></div><p class="product-dialog-description">Kebab cu pui, cartofi, lipie, legume și sosuri, la farfurie.</p><h3>Ingrediente</h3><ul class="product-ingredient-list"><li>Lipie</li><li>Cartofi</li><li>Carne de pui</li><li>Sos picant</li><li>Maioneză</li><li>Usturoi</li><li>Tzatziki</li><li>Sos cocktail</li><li>Curry</li><li>Ketchup</li><li>Varză</li><li>Castraveți murați</li><li>Roșii</li><li>Ceapă</li></ul><p class="product-dialog-note">Pentru detalii despre ingrediente și alergeni, <a href="contact.html">contactează restaurantul</a>.</p></div><div class="product-dialog-order"><a class="button button-primary bolt-link" href="https://food.bolt.eu/ro-ro/803-sibiu/p/149394-shaorma-la-andrei/" target="_blank" rel="noopener noreferrer">Comandă pe Bolt Food</a></div></div></div></dialog>
+<dialog class="product-dialog" id="product-kebab-box" aria-labelledby="product-title-kebab-box"><div class="product-dialog-panel"><form method="dialog" class="product-dialog-close"><button type="submit" aria-label="Închide detaliile preparatului" autofocus><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></form><div class="product-dialog-hero"><div class="product-dialog-photo"><img class="product-dialog-image" src="assets/la-andrei-logo.png" alt="La Andrei — Shaorma &amp; Kebab" width="1200" height="675" loading="lazy"></div><div class="product-dialog-heading"><p class="eyebrow">Kebab</p><h2 id="product-title-kebab-box">Kebab box</h2></div></div><div class="product-dialog-copy"><div class="product-dialog-details"><div class="product-dialog-facts"><span>Porție: <strong>200 g</strong></span><span class="food-price">20 <span>lei</span></span></div><p class="product-dialog-description">Carne de pui, cartofi și sosuri, la box.</p><h3>Ingrediente</h3><ul class="product-ingredient-list"><li>Carne de pui</li><li>Cartofi</li><li>Sosuri</li></ul><p class="product-dialog-note">Pentru detalii despre ingrediente și alergeni, <a href="contact.html">contactează restaurantul</a>.</p></div><div class="product-dialog-order"><a class="button button-primary bolt-link" href="https://food.bolt.eu/ro-ro/803-sibiu/p/149394-shaorma-la-andrei/" target="_blank" rel="noopener noreferrer">Comandă pe Bolt Food</a></div></div></div></dialog>
+<dialog class="product-dialog" id="product-cartofi-sosuri" aria-labelledby="product-title-cartofi-sosuri"><div class="product-dialog-panel"><form method="dialog" class="product-dialog-close"><button type="submit" aria-label="Închide detaliile preparatului" autofocus><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></form><div class="product-dialog-hero"><div class="product-dialog-photo"><img class="product-dialog-image" src="assets/real-fries-sauces.jpg" alt="Cartofi prăjiți cu sosuri" width="1200" height="675" loading="lazy"></div><div class="product-dialog-heading"><p class="eyebrow">Garnituri</p><h2 id="product-title-cartofi-sosuri">Cartofi prăjiți cu sosuri</h2></div></div><div class="product-dialog-copy"><div class="product-dialog-details"><div class="product-dialog-facts"><span>Gramaj: <strong>De confirmat la restaurant</strong></span><span class="food-price">12 <span>lei</span></span></div><p class="product-dialog-description">Cartofi prăjiți cu sosuri. Gramajul se confirmă la restaurant.</p><h3>Ingrediente</h3><ul class="product-ingredient-list"><li>Cartofi prăjiți</li><li>Sosuri</li></ul><p class="product-dialog-note">Pentru detalii despre ingrediente și alergeni, <a href="contact.html">contactează restaurantul</a>.</p></div><div class="product-dialog-order"><a class="button button-primary bolt-link" href="https://food.bolt.eu/ro-ro/803-sibiu/p/149394-shaorma-la-andrei/" target="_blank" rel="noopener noreferrer">Comandă pe Bolt Food</a></div></div></div></dialog>
+<dialog class="product-dialog" id="product-cartofi-salata" aria-labelledby="product-title-cartofi-salata"><div class="product-dialog-panel"><form method="dialog" class="product-dialog-close"><button type="submit" aria-label="Închide detaliile preparatului" autofocus><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></form><div class="product-dialog-hero"><div class="product-dialog-photo"><img class="product-dialog-image" src="assets/real-fries-salad.jpg" alt="Cartofi prăjiți și salată cu sosuri" width="1200" height="675" loading="lazy"></div><div class="product-dialog-heading"><p class="eyebrow">Garnituri</p><h2 id="product-title-cartofi-salata">Cartofi prăjiți și salată cu sosuri</h2></div></div><div class="product-dialog-copy"><div class="product-dialog-details"><div class="product-dialog-facts"><span>Porție: <strong>300 g</strong></span><span class="food-price">20 <span>lei</span></span></div><p class="product-dialog-description">Cartofi prăjiți, salată și sosuri.</p><h3>Ingrediente</h3><ul class="product-ingredient-list"><li>Cartofi prăjiți</li><li>Salată</li><li>Sosuri</li></ul><p class="product-dialog-note">Pentru detalii despre ingrediente și alergeni, <a href="contact.html">contactează restaurantul</a>.</p></div><div class="product-dialog-order"><a class="button button-primary bolt-link" href="https://food.bolt.eu/ro-ro/803-sibiu/p/149394-shaorma-la-andrei/" target="_blank" rel="noopener noreferrer">Comandă pe Bolt Food</a></div></div></div></dialog>
+<dialog class="product-dialog" id="product-sprite-330" aria-labelledby="product-title-sprite-330"><div class="product-dialog-panel"><form method="dialog" class="product-dialog-close"><button type="submit" aria-label="Închide detaliile preparatului" autofocus><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></form><div class="product-dialog-hero"><div class="product-dialog-photo"><img class="product-dialog-image" src="assets/real-sprite.jpg" alt="Sprite 330 ml" width="1200" height="675" loading="lazy"></div><div class="product-dialog-heading"><p class="eyebrow">Băuturi</p><h2 id="product-title-sprite-330">Sprite 330 ml</h2></div></div><div class="product-dialog-copy"><div class="product-dialog-details"><div class="product-dialog-facts"><span>Porție: <strong>330 ml</strong></span><span class="food-price">8 <span>lei</span></span></div><p class="product-dialog-description">Băutură răcoritoare, 330 ml.</p><h3>Ingrediente</h3><p class="product-dialog-description">Consultă ingredientele de pe ambalaj.</p><p class="product-dialog-note">Pentru detalii despre ingrediente și alergeni, <a href="contact.html">contactează restaurantul</a>.</p></div><div class="product-dialog-order"><a class="button button-primary bolt-link" href="https://food.bolt.eu/ro-ro/803-sibiu/p/149394-shaorma-la-andrei/" target="_blank" rel="noopener noreferrer">Comandă pe Bolt Food</a></div></div></div></dialog>
+<dialog class="product-dialog" id="product-cola-330" aria-labelledby="product-title-cola-330"><div class="product-dialog-panel"><form method="dialog" class="product-dialog-close"><button type="submit" aria-label="Închide detaliile preparatului" autofocus><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></form><div class="product-dialog-hero"><div class="product-dialog-photo"><img class="product-dialog-image" src="assets/real-cola-330.jpg" alt="Coca-Cola 330 ml" width="1200" height="675" loading="lazy"></div><div class="product-dialog-heading"><p class="eyebrow">Băuturi</p><h2 id="product-title-cola-330">Coca-Cola 330 ml</h2></div></div><div class="product-dialog-copy"><div class="product-dialog-details"><div class="product-dialog-facts"><span>Porție: <strong>330 ml</strong></span><span class="food-price">8 <span>lei</span></span></div><p class="product-dialog-description">Coca-Cola, 330 ml.</p><h3>Ingrediente</h3><p class="product-dialog-description">Consultă ingredientele de pe ambalaj.</p><p class="product-dialog-note">Pentru detalii despre ingrediente și alergeni, <a href="contact.html">contactează restaurantul</a>.</p></div><div class="product-dialog-order"><a class="button button-primary bolt-link" href="https://food.bolt.eu/ro-ro/803-sibiu/p/149394-shaorma-la-andrei/" target="_blank" rel="noopener noreferrer">Comandă pe Bolt Food</a></div></div></div></dialog>
+<dialog class="product-dialog" id="product-cola-500" aria-labelledby="product-title-cola-500"><div class="product-dialog-panel"><form method="dialog" class="product-dialog-close"><button type="submit" aria-label="Închide detaliile preparatului" autofocus><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></form><div class="product-dialog-hero"><div class="product-dialog-photo"><img class="product-dialog-image" src="assets/real-cola-500.jpg" alt="Coca-Cola 500 ml" width="1200" height="675" loading="lazy"></div><div class="product-dialog-heading"><p class="eyebrow">Băuturi</p><h2 id="product-title-cola-500">Coca-Cola 500 ml</h2></div></div><div class="product-dialog-copy"><div class="product-dialog-details"><div class="product-dialog-facts"><span>Porție: <strong>500 ml</strong></span><span class="food-price">10 <span>lei</span></span></div><p class="product-dialog-description">Coca-Cola, 500 ml.</p><h3>Ingrediente</h3><p class="product-dialog-description">Consultă ingredientele de pe ambalaj.</p><p class="product-dialog-note">Pentru detalii despre ingrediente și alergeni, <a href="contact.html">contactează restaurantul</a>.</p></div><div class="product-dialog-order"><a class="button button-primary bolt-link" href="https://food.bolt.eu/ro-ro/803-sibiu/p/149394-shaorma-la-andrei/" target="_blank" rel="noopener noreferrer">Comandă pe Bolt Food</a></div></div></div></dialog>
+<dialog class="product-dialog" id="product-ayran-250" aria-labelledby="product-title-ayran-250"><div class="product-dialog-panel"><form method="dialog" class="product-dialog-close"><button type="submit" aria-label="Închide detaliile preparatului" autofocus><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></form><div class="product-dialog-hero"><div class="product-dialog-photo"><img class="product-dialog-image" src="assets/real-ayran.jpg" alt="Ayran 250 ml" width="1200" height="675" loading="lazy"></div><div class="product-dialog-heading"><p class="eyebrow">Băuturi</p><h2 id="product-title-ayran-250">Ayran 250 ml</h2></div></div><div class="product-dialog-copy"><div class="product-dialog-details"><div class="product-dialog-facts"><span>Porție: <strong>250 ml</strong></span><span class="food-price">8 <span>lei</span></span></div><p class="product-dialog-description">Ayran, 250 ml.</p><h3>Ingrediente</h3><p class="product-dialog-description">Consultă ingredientele de pe ambalaj.</p><p class="product-dialog-note">Pentru detalii despre ingrediente și alergeni, <a href="contact.html">contactează restaurantul</a>.</p></div><div class="product-dialog-order"><a class="button button-primary bolt-link" href="https://food.bolt.eu/ro-ro/803-sibiu/p/149394-shaorma-la-andrei/" target="_blank" rel="noopener noreferrer">Comandă pe Bolt Food</a></div></div></div></dialog>
+<dialog class="product-dialog" id="product-xixo-250" aria-labelledby="product-title-xixo-250"><div class="product-dialog-panel"><form method="dialog" class="product-dialog-close"><button type="submit" aria-label="Închide detaliile preparatului" autofocus><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></form><div class="product-dialog-hero"><div class="product-dialog-photo"><img class="product-dialog-image" src="assets/real-xixo.jpg" alt="XIXO 250 ml" width="1200" height="675" loading="lazy"></div><div class="product-dialog-heading"><p class="eyebrow">Băuturi</p><h2 id="product-title-xixo-250">XIXO 250 ml</h2></div></div><div class="product-dialog-copy"><div class="product-dialog-details"><div class="product-dialog-facts"><span>Porție: <strong>250 ml</strong></span><span class="food-price">5 <span>lei</span></span></div><p class="product-dialog-description">Băutură răcoritoare XIXO, 250 ml.</p><h3>Ingrediente</h3><p class="product-dialog-description">Consultă ingredientele de pe ambalaj.</p><p class="product-dialog-note">Pentru detalii despre ingrediente și alergeni, <a href="contact.html">contactează restaurantul</a>.</p></div><div class="product-dialog-order"><a class="button button-primary bolt-link" href="https://food.bolt.eu/ro-ro/803-sibiu/p/149394-shaorma-la-andrei/" target="_blank" rel="noopener noreferrer">Comandă pe Bolt Food</a></div></div></div></dialog><p class="menu-ingredient-note">Ai întrebări despre ingrediente sau alergeni? <a href="contact.html">Contactează restaurantul.</a></p><div class="menu-footer"><p>Ți-ai ales preferatul?</p><a class="text-link bolt-link" href="https://food.bolt.eu/ro-ro/803-sibiu/p/149394-shaorma-la-andrei/" target="_blank" rel="noopener noreferrer">Comandă pe Bolt Food</a></div></div></section></main>
     <footer class="site-footer">
         <div class="container footer-inner">
-            <a class="brand" href="index.html" aria-label="La Andrei — acasă"><img src="assets/la-andrei-logo.png"
-                    alt="La Andrei" width="1760" height="888" loading="lazy"></a>
+            <a class="brand" href="index.html" aria-label="La Andrei — acasă"><img src="assets/la-andrei-logo.png" alt="La Andrei" width="1760" height="888" loading="lazy"></a>
             <p>Shaorma & kebab. Din Sibiu, cu poftă.</p>
-            <nav class="footer-links" aria-label="Navigare subsol"><a href="index.html#despre">Despre noi</a><a
-                    href="index.html#recenzii">Recenzii</a><a href="meniu.html">Meniu</a><a href="contact.html">Contact
-                    & locație</a></nav>
+            <nav class="footer-links" aria-label="Navigare subsol"><a href="index.html#despre">Despre noi</a><a href="index.html#recenzii">Recenzii</a><a href="meniu.html">Meniu</a><a href="contact.html">Contact & locație</a></nav>
         </div>
-        <div class="container footer-bottom">
-            <p>© <span id="current-year">2026</span> La Andrei. Toate drepturile rezervate.</p>
-            <p>Recenziile sunt exemple fictive pentru prezentarea site-ului.</p>
-        </div>
+        <div class="container footer-bottom"><p>© <span id="current-year">2026</span> La Andrei. Toate drepturile rezervate.</p><p>Recenziile sunt exemple fictive pentru prezentarea site-ului.</p></div>
     </footer>
 </body>
-
 </html>

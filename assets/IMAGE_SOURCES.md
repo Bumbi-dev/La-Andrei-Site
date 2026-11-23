@@ -1,6 +1,6 @@
 # Food photography
 
-These images are illustrative AI-generated food photography, not product photographs supplied by La Andrei. The existing `la-andrei-logo.png` was supplied separately and was not generated or changed.
+These assets include illustrative AI-generated food photography and an AI-assisted background edit of a restaurant product photograph, as identified below. The existing `la-andrei-logo.png` was supplied separately and was not generated or changed.
 
 Generation mode: built-in `image_gen` tool, with `transparent_background: false`. Each asset was generated independently, visually inspected, and exported as an optimized JPEG at quality 90 using System.Drawing. Original generated PNGs were preserved.
 
@@ -27,3 +27,16 @@ Generation mode: built-in `image_gen` tool, with `transparent_background: false`
 - Final prompt:
 
 > Use case: product-mockup. Asset type: landscape restaurant menu card photograph. Photorealistic commercial food photography of a black ceramic plate piled generously with grilled chicken kebab strips, golden French fries, shredded lettuce, purple cabbage, tomato slices and creamy garlic and orange cocktail sauce drizzles. Food is generous and realistic, lightly charred juicy chicken textures. Three-quarter slightly elevated angle with entire plate visible centered, landscape 3:2 composition, matte charcoal tabletop, deep near-black background, dramatic warm studio light. No text, logos, graphics, watermark, hands or people.
+
+## hero-shaorma-slate.jpg
+
+- Use: homepage hero; optimized JPEG, 1672 × 941 pixels.
+- Mode: built-in `image_gen`, image edit/composite, opaque background.
+- Edit target: `real-shawarma-large.jpg`; original merchant-photo provenance remains in `PHOTO_SOURCES.md`.
+- Background reference: `hero-shawarma.jpg` (the earlier generated slate-background image).
+- Original edited PNG: `C:\Users\Claudiu\.codex\generated_images\01a1f4ba-745f-7762-a57b-4ab71f8bc8a5\exec-f74026cc-36c1-44e8-865a-149553089c9f.png`.
+- AI-assisted presentation composite; the green tabletop is replaced by dark slate and studio lighting. Menu photographs keep their original files.
+
+Final prompt:
+
+> Use case: background-extraction and compositing. Asset type: photorealistic restaurant website hero banner. Image 1 is the EDIT TARGET: the real Shaorma mare on a bright green tabletop, partly wrapped in silver aluminum foil. Image 2 is ONLY a supporting BACKGROUND/LIGHTING reference: charcoal-black slate and dark studio food photography. Carefully isolate the SINGLE existing shawarma from Image 1 and place that same shawarma onto a beautiful matte black slate serving surface with a deep near-black textured studio background matching the mood of Image 2. Preserve the exact source shawarma's identity: the single long wrap, its original diagonal orientation, open chicken-and-vegetable-filled front, bread shape and texture, foil wrapping and visible filling. Do not replace it with the wraps from Image 2. Do not redesign the food, add fillings, duplicate it, cut it in half, remove its foil, or invent grill marks. Remove all green tabletop, jars and white side borders from Image 1. Make clean natural edges with no green spill; add a believable soft contact shadow and subtle warm side light that integrates the source food into the new setting. Layout: wide landscape hero around 16:9; place the entire shawarma in the RIGHT 60 percent, with the open end facing forward-left and foil end toward upper-right, and leave LEFT 40 percent as clean dark negative space for real HTML page copy. Keep the entire wrap inside the frame with a small margin. Background only may be synthesized. No extra food, fries, garnish, text, logos, icons, watermark, hands or people. Final is opaque, polished photographic composite.

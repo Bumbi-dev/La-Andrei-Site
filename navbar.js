@@ -3,9 +3,18 @@ document.documentElement.classList.add('js');
 const navbar = document.querySelector('.site-header');
 let scrollFramePending = false;
 
+function updateHeaderHeight() {
+    document.documentElement.style.setProperty('--header-height', navbar.offsetHeight + 'px');
+}
+updateHeaderHeight();
+if ('ResizeObserver' in window) new ResizeObserver(updateHeaderHeight).observe(navbar);
+else window.addEventListener('resize', updateHeaderHeight);
+
 function updateNavbarOpacity() {
     const opacity = Math.min(Math.max(window.scrollY / 400, 0), 1);
     navbar.style.setProperty('--navbar-opacity', opacity);
+    const fadeSize = 28 * (1 - Math.min(Math.max(window.scrollY / 600, 0), 1));
+    navbar.style.setProperty('--navbar-fade-size', fadeSize + 'px');
 }
 
 window.addEventListener('scroll', () => {
@@ -27,6 +36,7 @@ function setMenuOpen(open, returnFocus = false) {
     menuToggle.setAttribute('aria-expanded', String(open));
     menuToggle.setAttribute('aria-label', open ? 'Închide meniul' : 'Deschide meniul');
     navigation.dataset.open = String(open);
+    navbar.classList.toggle('menu-open', open);
     if (returnFocus) menuToggle.focus();
 }
 

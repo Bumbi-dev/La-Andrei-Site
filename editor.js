@@ -65,7 +65,7 @@
         const split = (name) => String(values.get(name) || '').split(',').map(value => value.trim()).filter(Boolean);
         return {
             id: values.get('id'), name: values.get('name'), category: values.get('category'), categoryLabel: values.get('categoryLabel'),
-            price: Number(values.get('price')), grams: Number(values.get('grams')), description: values.get('description'),
+            price: Number(values.get('price')), grams: values.get('grams') === '' ? null : Number(values.get('grams')), unit: values.get('unit') || 'g', description: values.get('description'),
             ingredients: split('ingredients'), allergens: split('allergens'), image: values.get('image'), imageAlt: values.get('imageAlt'), badge: values.get('badge'),
             available: values.has('available'), visible: values.has('visible')
         };
@@ -180,7 +180,7 @@
     document.querySelector('#add-product').addEventListener('click', () => {
         if (!data || !canLeaveForm()) return;
         const existing = data.products[0];
-        const item = { id: newId('produs', data.products), name: 'Preparat nou', category: existing ? existing.category : 'shaorma', categoryLabel: existing ? existing.categoryLabel : 'Shaorma', grams: 100, price: 1, description: '', ingredients: ['Completează ingredientele'], allergens: [], image: existing ? existing.image : 'assets/real-shawarma-large.jpg', imageAlt: 'Completează descrierea preparatului', available: false, visible: false, badge: '' };
+        const item = { id: newId('produs', data.products), name: 'Preparat nou', category: existing ? existing.category : 'shaorma', categoryLabel: existing ? existing.categoryLabel : 'Shaorma', grams: null, unit: 'g', price: 1, description: '', ingredients: [], allergens: [], image: existing ? existing.image : 'assets/real-shawarma-large.jpg', imageAlt: 'Completează descrierea preparatului', available: false, visible: false, badge: '' };
         data.products.push(item);
         changed();
         selectProduct(item.id);

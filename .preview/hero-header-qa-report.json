@@ -1,0 +1,235 @@
+{
+  "checks": [
+    {
+      "name": "Hero and navbar initial 1440",
+      "headerTop": 0,
+      "headerBottom": 89,
+      "heroTop": 0,
+      "imageTop": 0,
+      "headingTop": 198.390625,
+      "alpha": 0,
+      "background": "rgba(24, 24, 24, 0)",
+      "blur": "blur(0px)",
+      "imageLoaded": true,
+      "source": "assets/hero-shaorma-slate.jpg",
+      "preload": "assets/hero-shaorma-slate.jpg"
+    },
+    {
+      "name": "Navbar scroll 1440",
+      "scroll": 200,
+      "top": 0,
+      "rgb": [
+        24,
+        24,
+        24
+      ],
+      "alpha": 0.41
+    },
+    {
+      "name": "Navbar scroll 1440",
+      "scroll": 400,
+      "top": 0,
+      "rgb": [
+        24,
+        24,
+        24
+      ],
+      "alpha": 0.82
+    },
+    {
+      "name": "Navbar scroll 1440",
+      "scroll": 800,
+      "top": 0,
+      "rgb": [
+        24,
+        24,
+        24
+      ],
+      "alpha": 0.82
+    },
+    {
+      "name": "Navbar scroll 1440",
+      "scroll": 0,
+      "top": 0,
+      "rgb": [
+        24,
+        24,
+        24
+      ],
+      "alpha": 0
+    },
+    {
+      "name": "Hero and navbar initial 390",
+      "headerTop": 0,
+      "headerBottom": 73,
+      "heroTop": 0,
+      "imageTop": 0,
+      "headingTop": 151,
+      "alpha": 0,
+      "background": "rgba(24, 24, 24, 0)",
+      "blur": "blur(0px)",
+      "imageLoaded": true,
+      "source": "assets/hero-shaorma-slate.jpg",
+      "preload": "assets/hero-shaorma-slate.jpg"
+    },
+    {
+      "name": "Navbar scroll 390",
+      "scroll": 200,
+      "top": 0,
+      "rgb": [
+        24,
+        24,
+        24
+      ],
+      "alpha": 0.41
+    },
+    {
+      "name": "Navbar scroll 390",
+      "scroll": 400,
+      "top": 0,
+      "rgb": [
+        24,
+        24,
+        24
+      ],
+      "alpha": 0.82
+    },
+    {
+      "name": "Navbar scroll 390",
+      "scroll": 800,
+      "top": 0,
+      "rgb": [
+        24,
+        24,
+        24
+      ],
+      "alpha": 0.82
+    },
+    {
+      "name": "Navbar scroll 390",
+      "scroll": 0,
+      "top": 0,
+      "rgb": [
+        24,
+        24,
+        24
+      ],
+      "alpha": 0
+    },
+    {
+      "name": "Hero and navbar initial 320",
+      "headerTop": 0,
+      "headerBottom": 73,
+      "heroTop": 0,
+      "imageTop": 0,
+      "headingTop": 151,
+      "alpha": 0,
+      "background": "rgba(24, 24, 24, 0)",
+      "blur": "blur(0px)",
+      "imageLoaded": true,
+      "source": "assets/hero-shaorma-slate.jpg",
+      "preload": "assets/hero-shaorma-slate.jpg"
+    },
+    {
+      "name": "Navbar scroll 320",
+      "scroll": 200,
+      "top": 0,
+      "rgb": [
+        24,
+        24,
+        24
+      ],
+      "alpha": 0.41
+    },
+    {
+      "name": "Navbar scroll 320",
+      "scroll": 400,
+      "top": 0,
+      "rgb": [
+        24,
+        24,
+        24
+      ],
+      "alpha": 0.82
+    },
+    {
+      "name": "Navbar scroll 320",
+      "scroll": 800,
+      "top": 0,
+      "rgb": [
+        24,
+        24,
+        24
+      ],
+      "alpha": 0.82
+    },
+    {
+      "name": "Navbar scroll 320",
+      "scroll": 0,
+      "top": 0,
+      "rgb": [
+        24,
+        24,
+        24
+      ],
+      "alpha": 0
+    },
+    {
+      "name": "Inner page spacing meniu.html",
+      "header": 73,
+      "main": 73
+    },
+    {
+      "name": "Inner page spacing contact.html",
+      "header": 73,
+      "main": 73
+    }
+  ],
+  "viewports": [
+    {
+      "label": "hero-1440",
+      "width": 1440,
+      "documentWidth": 1425,
+      "overflowing": []
+    },
+    {
+      "label": "hero-390",
+      "width": 390,
+      "documentWidth": 390,
+      "overflowing": [
+        {
+          "tag": "IMG",
+          "class": ""
+        },
+        {
+          "tag": "IMG",
+          "class": ""
+        },
+        {
+          "tag": "IMG",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "label": "hero-320",
+      "width": 320,
+      "documentWidth": 320,
+      "overflowing": []
+    }
+  ],
+  "errors": [],
+  "screenshots": [
+    "hero-navbar-start-1440.png",
+    "hero-navbar-scrolled-1440.png",
+    "hero-navbar-start-390.png",
+    "hero-navbar-start-320.png"
+  ],
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Edg/158.0.4370.33",
+    "revision": "@56b8f691820060b6e15f702165117f203442943f",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.0.0 Safari/537.36 Edg/158.0.0.0",
+    "jsVersion": "15.8.13.3"
+  }
+}

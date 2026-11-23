@@ -1,7 +1,8 @@
 :root { color-scheme: dark; --background: #101010; --panel: #191919; --muted: #bdb8b2; --line: #ffffff24; --red: #ed3339; --green: #25845d; }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--background); color: #f9f6f0; font: 1rem/1.55 system-ui, sans-serif; }
-button, input, textarea { font: inherit; }
+button, input, textarea, select { font: inherit; }
+select { display: block; width: 100%; min-height: 44px; margin-top: 6px; padding: 10px 12px; border: 1px solid #ffffff35; border-radius: 6px; background: #101010; color: #fff; }
 button, a, label[for] { -webkit-tap-highlight-color: transparent; }
 button { cursor: pointer; }
 a { color: inherit; text-underline-offset: 4px; }

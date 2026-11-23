@@ -25,6 +25,8 @@ Comanda validează datele și imaginile, regenerează meniul/recenziile/datele d
 
 ## Fotografii și conținut
 
+Catalogul include 14 produse din meniul public Wolt verificat la 23 noiembrie 2026. Sandwich Panini și sandwich-ul crispy au fost eliminate la cererea utilizatorului. Prețurile existente 36/42/31 lei sunt păstrate; cele noi provin din listarea Wolt. Sursa și neclaritățile sunt documentate în `assets/MENU_SOURCES.md`. Băuturile folosesc `unit: "ml"`; preparatele folosesc `unit: "g"`. `grams: null` înseamnă gramaj neconfirmat, iar lista goală de ingrediente rămâne marcată ca neconfirmată, fără completări inventate.
+
 - Pentru o fotografie nouă, copiază fișierul în `assets/` și completează calea sa relativă în editor (de exemplu `assets/shaorma.jpg`). Sunt acceptate PNG, JPEG, WebP și AVIF. Build-ul se oprește dacă imaginea lipsește.
 - Numele, orașul, adresa, telefonul, emailul, programul și legăturile oficiale sunt în `content/site.json`. Câmpurile neconfirmate rămân goale; un program gol nu este afișat și nu este inventat în datele SEO.
 - Cele trei produse păstrează prețurile din referința furnizată: 36, 42 și 31 lei. Fotografiile și ingredientele provin din lista oficială Wolt; proveniența imaginilor este documentată în `assets/`. Reconfirmați prețurile, ingredientele, alergenii și dreptul de utilizare a fotografiilor înainte de lansarea comercială.

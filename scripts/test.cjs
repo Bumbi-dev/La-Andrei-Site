@@ -5,7 +5,8 @@ const assert = require('node:assert/strict');
 const vm = require('node:vm');
 const model = require('../content-model.js');
 const { build, replaceRegion } = require('./build.cjs');
-const data = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../content/site.json'), 'utf8'));
+const fullMenu = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../content/site.json'), 'utf8'));
+const data = { ...fullMenu, products: fullMenu.products.slice(0, 3) };
 const copy = (value) => JSON.parse(JSON.stringify(value));
 let assertions = 0;
 function check(name, callback) { callback(); assertions += 1; console.log('OK ' + name); }
@@ -14,6 +15,20 @@ check('Source content validates without mutation', () => {
     const source = JSON.stringify(data);
     assert.equal(model.validate(data).products.length, 3);
     assert.equal(JSON.stringify(data), source);
+});
+check('The full catalog renders foods, drinks and unconfirmed quantities honestly', () => {
+    const menu = model.validate(fullMenu);
+    assert.ok(menu.products.length >= 14);
+    assert.ok(!menu.products.some(item => ['sandwich-panini', 'sandwich-crispy-mare'].includes(item.id)));
+    const html = model.renderMenu(menu);
+    assert.equal((html.match(/data-product-id=/g) || []).length, menu.products.filter(item => item.visible).length);
+    assert.equal((html.match(/<dialog\b/g) || []).length, menu.products.filter(item => item.visible).length);
+    assert.ok(html.includes('330 ml'));
+    assert.ok(html.includes('Gramaj de confirmat'));
+    assert.ok(html.includes('Consultă ingredientele de pe ambalaj.'));
+    assert.ok(!html.includes('null g'));
+    const bad = copy(fullMenu); bad.products[0].unit = 'kg';
+    assert.throws(() => model.validate(bad), /unitatea/);
 });
 check('Duplicate product IDs are rejected', () => {
     const invalid = copy(data);

@@ -67,6 +67,7 @@
                 category: identifier(item.category, prefix + 'categorie'),
                 categoryLabel: text(item.categoryLabel, prefix + 'eticheta categoriei', 80),
                 grams: item.grams,
+                unit: item.unit === undefined ? 'g' : item.unit,
                 price: item.price,
                 description: text(item.description === undefined ? '' : item.description, prefix + 'descriere', 500, false),
                 ingredients: list(item.ingredients, prefix + 'ingrediente'),
@@ -82,10 +83,10 @@
             if (result.category === 'all') errors.push(prefix + 'categoria all este rezervată.');
             if (categories.has(result.category) && categories.get(result.category) !== result.categoryLabel) errors.push(prefix + 'aceeași categorie trebuie să aibă aceeași etichetă.');
             categories.set(result.category, result.categoryLabel);
-            if (!Number.isInteger(result.grams) || result.grams <= 0 || result.grams > 100000) errors.push(prefix + 'gramajul trebuie să fie un număr întreg pozitiv.');
+            if (result.grams !== null && (!Number.isInteger(result.grams) || result.grams <= 0 || result.grams > 100000)) errors.push(prefix + 'gramajul trebuie să fie un număr întreg pozitiv sau null dacă nu este confirmat.');
+            if (!['g', 'ml'].includes(result.unit)) errors.push(prefix + 'unitatea trebuie să fie g sau ml.');
             if (typeof result.price !== 'number' || !Number.isFinite(result.price) || result.price <= 0 || result.price > 10000 || Math.abs(Math.round(result.price * 100) - result.price * 100) > 0.000001) errors.push(prefix + 'prețul trebuie să fie pozitiv, cu maximum două zecimale.');
             if (!/^assets\/[a-zA-Z0-9_./-]+\.(?:png|jpe?g|webp|avif)$/i.test(result.image) || result.image.split('/').some((segment) => segment === '..' || segment === '.')) errors.push(prefix + 'imaginea trebuie să fie un fișier din assets/, fără segmente de navigare.');
-            if (!result.ingredients.length) errors.push(prefix + 'adăugați cel puțin un ingredient.');
             return result;
         });
         const sourceReviews = Array.isArray(input.reviews) ? input.reviews : [];
@@ -123,9 +124,9 @@
         const image = '<img src="' + h(item.image) + '" alt="' + h(item.imageAlt) + '" width="1200" height="675" loading="lazy" decoding="async">';
         return '<article class="food-card' + (item.available ? '' : ' is-unavailable') + '" data-category="' + h(item.category) + '" data-product-id="' + h(item.id) + '"' + (options.modal ? ' data-dialog-id="' + h(dialogId) + '"' : '') + '>\n' +
             '<div class="food-image">' + (options.modal ? '<a class="food-photo-trigger" href="#ingredients-' + h(item.id) + '"' + attributes + ' aria-label="Detalii despre ' + h(item.name) + '">' + image + '</a>' : image) + (item.badge ? '<span class="food-badge">' + h(item.badge) + '</span>' : '') + '</div>\n' +
-            '<div class="food-content"><p class="food-category">' + h(item.categoryLabel) + ' <span>·</span> ' + item.grams + ' g</p><h3>' + (options.modal ? '<a href="#ingredients-' + h(item.id) + '"' + attributes + '>' + h(item.name) + '</a>' : h(item.name)) + '</h3>' +
+            '<div class="food-content"><p class="food-category">' + h(item.categoryLabel) + ' <span>·</span> ' + (item.grams === null ? 'Gramaj de confirmat' : item.grams + ' ' + (item.unit || 'g')) + '</p><h3>' + (options.modal ? '<a href="#ingredients-' + h(item.id) + '"' + attributes + '>' + h(item.name) + '</a>' : h(item.name)) + '</h3>' +
             (item.description ? '<p class="food-description">' + h(item.description) + '</p>' : '') +
-            '<details class="food-ingredients" id="ingredients-' + h(item.id) + '"><summary>Ingrediente</summary><p>' + h(item.ingredients.join(', ')) + '.</p></details>' +
+            '<details class="food-ingredients" id="ingredients-' + h(item.id) + '"><summary>Ingrediente</summary><p>' + (item.ingredients.length ? h(item.ingredients.join(', ')) + '.' : item.unit === 'ml' ? 'Consultă ingredientele de pe ambalaj.' : 'Lista ingredientelor se confirmă la restaurant.') + '</p></details>' +
             (options.modal ? '<button class="food-details-button" type="button"' + attributes + '>Ingrediente și gramaj</button>' : '') +
             (item.allergens.length ? '<p class="food-allergens"><strong>Alergeni:</strong> ' + h(item.allergens.join(', ')) + '.</p>' : '') +
             '<div class="food-bottom"><p class="food-price">' + formattedPrice + ' <span>lei</span></p>' +
@@ -137,9 +138,9 @@
             '<form method="dialog" class="product-dialog-close"><button type="submit" aria-label="Închide detaliile preparatului" autofocus><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></form>' +
             '<div class="product-dialog-hero"><div class="product-dialog-photo"><img class="product-dialog-image" src="' + h(item.image) + '" alt="' + h(item.imageAlt) + '" width="1200" height="675" loading="lazy"></div>' +
             '<div class="product-dialog-heading"><p class="eyebrow">' + h(item.categoryLabel) + '</p><h2 id="product-title-' + h(item.id) + '">' + h(item.name) + '</h2></div></div>' +
-            '<div class="product-dialog-copy"><div class="product-dialog-details"><div class="product-dialog-facts"><span>Porție: <strong>' + item.grams + ' g</strong></span><span class="food-price">' + new Intl.NumberFormat('ro-RO', { maximumFractionDigits: 2 }).format(item.price) + ' <span>lei</span></span></div>' +
+            '<div class="product-dialog-copy"><div class="product-dialog-details"><div class="product-dialog-facts"><span>' + (item.grams === null ? 'Gramaj: <strong>De confirmat la restaurant</strong>' : 'Porție: <strong>' + item.grams + ' ' + (item.unit || 'g') + '</strong>') + '</span><span class="food-price">' + new Intl.NumberFormat('ro-RO', { maximumFractionDigits: 2 }).format(item.price) + ' <span>lei</span></span></div>' +
             (item.description ? '<p class="product-dialog-description">' + h(item.description) + '</p>' : '') +
-            '<h3>Ingrediente</h3><ul class="product-ingredient-list">' + item.ingredients.map(ingredient => '<li>' + h(ingredient) + '</li>').join('') + '</ul>' +
+            '<h3>Ingrediente</h3>' + (item.ingredients.length ? '<ul class="product-ingredient-list">' + item.ingredients.map(ingredient => '<li>' + h(ingredient) + '</li>').join('') + '</ul>' : '<p class="product-dialog-description">' + (item.unit === 'ml' ? 'Consultă ingredientele de pe ambalaj.' : 'Lista ingredientelor se confirmă la restaurant.') + '</p>') +
             (item.allergens.length ? '<p class="food-allergens"><strong>Alergeni:</strong> ' + h(item.allergens.join(', ')) + '.</p>' : '') +
             '<p class="product-dialog-note">Pentru detalii despre ingrediente și alergeni, <a href="contact.html">contactează restaurantul</a>.</p>' +
             '</div><div class="product-dialog-order">' +
@@ -158,7 +159,7 @@
             const name = review.author.replace(/^Exemplu\s*[—–-]\s*/i, '').trim();
             const initials = name.split(/\s+/).slice(0, 2).map(word => Array.from(word)[0] || '').join('').toLocaleUpperCase('ro-RO');
             const avatar = review.avatar ? '<img src="' + escapeHtml(review.avatar) + '" alt="" width="44" height="44" loading="lazy">' : escapeHtml(initials || '?');
-            return '<figure class="review-card"><div class="review-card-top"><span class="review-stars" role="img" aria-label="' + review.rating + ' din 5 stele"><span aria-hidden="true">' + '★'.repeat(review.rating) + '☆'.repeat(5 - review.rating) + '</span></span><span class="review-example-label">Exemplu fictiv</span></div><blockquote><p>„' + escapeHtml(review.text) + '”</p></blockquote><figcaption class="review-author"><span class="review-avatar" aria-hidden="true">' + avatar + '</span><span>' + escapeHtml(review.author) + '</span></figcaption></figure>';
+            return '<figure class="review-card"><figcaption class="review-card-top"><span class="review-author"><span class="review-avatar" aria-hidden="true">' + avatar + '</span><span>' + escapeHtml(review.author) + '</span></span><span class="review-stars" role="img" aria-label="' + review.rating + ' din 5 stele"><span aria-hidden="true">' + '★'.repeat(review.rating) + '☆'.repeat(5 - review.rating) + '</span></span></figcaption><blockquote><p>„' + escapeHtml(review.text) + '”</p></blockquote><span class="review-example-label">Exemplu fictiv</span></figure>';
         }).join('\n') + '\n</div>';
     }
     function renderBusiness(data) {
