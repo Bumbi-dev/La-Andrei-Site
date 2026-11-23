@@ -30,12 +30,7 @@ label[for="import-json"]:focus-within { outline: 3px solid #fff; outline-offset:
 .save-state.is-dirty { color: #f6c775; }
 .editor-status { margin-block: 16px; padding: 12px 15px; border-left: 3px solid var(--green); background: #1c2621; white-space: pre-line; font-size: 0.9375rem; }
 .editor-status.is-error { border-color: var(--red); background: #321c1e; }
-.editor-help { margin-bottom: 24px; border: 1px solid var(--line); border-radius: 7px; padding: 13px 16px; color: var(--muted); font-size: 0.9375rem; }
-summary { cursor: pointer; }
-.editor-help summary { color: #fff; font-weight: 650; }
-.editor-help li { padding-block: 3px; }
-.editor-help p { margin-block: 12px 2px; }
-code { padding: 1px 5px; border-radius: 3px; background: #ffffff10; color: #fff; overflow-wrap: anywhere; }
+.editor-status:empty { margin: 0 0 16px; padding: 0; border: 0; }
 .editor-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
 .editor-tab { padding: 10px 18px; min-height: 44px; border: 1px solid var(--line); border-radius: 7px; background: transparent; color: var(--muted); }
 .editor-tab.is-active { color: #fff; background: #333; border-color: #777; }

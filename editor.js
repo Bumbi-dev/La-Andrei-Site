@@ -148,7 +148,7 @@
             data = next;
             changed();
             selectProduct(data.products[index].id);
-            report('Produsul a fost modificat în ciornă. Exportă JSON-ul pentru a actualiza proiectul.');
+            report('Produs actualizat în ciornă.');
         } catch (error) { report(error.message, true); }
     });
     businessForm.addEventListener('submit', (event) => {
@@ -196,7 +196,7 @@
     });
     document.querySelector('#add-review').addEventListener('click', () => {
         if (!data || !canLeaveForm()) return;
-        const review = { id: newId('exemplu', data.reviews), author: 'Exemplu — Client', rating: 5, text: 'Text demonstrativ pentru previzualizare.', isExample: true, visible: false };
+        const review = { id: newId('exemplu', data.reviews), author: 'Exemplu — Client', rating: 5, text: 'Textul recenziei.', isExample: true, visible: false };
         data.reviews.push(review);
         changed();
         selectReview(review.id);

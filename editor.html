@@ -13,7 +13,7 @@
 </head>
 <body>
     <header class="editor-header">
-        <div><p class="eyebrow">La Andrei</p><h1>Editor local</h1><p>Meniu, date de contact și recenzii demonstrative.</p></div>
+        <div><p class="eyebrow">La Andrei</p><h1>Editor local</h1><p>Meniu, date de contact și recenzii.</p></div>
         <a class="button button-secondary" href="index.html" target="_blank" rel="noopener">Vezi site-ul</a>
     </header>
     <main class="editor-main">
@@ -24,13 +24,12 @@
             <button class="button button-secondary" id="restore-draft" type="button" hidden>Restaurează ciorna locală</button>
             <span class="save-state" id="save-state">Conținut încărcat</span>
         </div>
-        <div class="editor-status" id="editor-status" role="status" aria-live="polite">Modificările rămân locale până la export și regenerarea site-ului.</div>
-        <details class="editor-help"><summary>Cum actualizez site-ul?</summary><ol><li>Editează câmpurile și apasă „Aplică modificările” în formular.</li><li>Apasă „Salvează în folderul site-ului” și selectează folderul proiectului. Editorul actualizează JSON-ul, paginile HTML și folderul <code>dist/</code>.</li><li>Dacă browserul nu permite salvarea în folder, descarcă JSON-ul, înlocuiește <code>content/site.json</code> și rulează <code>node scripts/build.cjs</code>.</li></ol><p>Fotografiile noi se copiază în <code>assets/</code>, apoi se completează calea lor în formular. Editorul actualizează fișierele locale.</p></details>
+        <div class="editor-status" id="editor-status" role="status" aria-live="polite"></div>
 
         <div class="editor-tabs" role="group" aria-label="Tipul conținutului">
             <button class="editor-tab is-active" data-panel="products" type="button" aria-pressed="true">Produse</button>
             <button class="editor-tab" data-panel="business" type="button" aria-pressed="false">Restaurant</button>
-            <button class="editor-tab" data-panel="reviews" type="button" aria-pressed="false">Recenzii exemplu</button>
+            <button class="editor-tab" data-panel="reviews" type="button" aria-pressed="false">Recenzii</button>
         </div>
 
         <section class="editor-panel" data-panel-content="products" aria-label="Editarea produselor">
@@ -74,11 +73,10 @@
             </form>
         </section>
 
-        <section class="editor-panel" data-panel-content="reviews" aria-label="Recenzii demonstrative" hidden>
-            <aside class="editor-sidebar"><div class="sidebar-heading"><h2>Exemple</h2><button class="small-button" id="add-review" type="button">Adaugă exemplu</button></div><div class="item-list" id="review-list"></div></aside>
+        <section class="editor-panel" data-panel-content="reviews" aria-label="Recenzii" hidden>
+            <aside class="editor-sidebar"><div class="sidebar-heading"><h2>Recenzii</h2><button class="small-button" id="add-review" type="button">Adaugă exemplu</button></div><div class="item-list" id="review-list"></div></aside>
             <form id="review-form" class="editor-form">
                 <div class="form-heading"><h2>Recenzie demonstrativă</h2><button class="delete-button" id="remove-review" type="button">Șterge exemplul</button></div>
-                <p class="form-note">Toate aceste texte sunt fictive și vor avea eticheta „Exemplu fictiv” pe site. Nu sunt preluate din Google Maps și nu contribuie la un rating real.</p>
                 <div class="form-grid"><label>Autor afișat<input name="author" required maxlength="100"></label><label>ID unic<input name="id" required pattern="[a-z0-9]+(-[a-z0-9]+)*" maxlength="80"></label><label>Stele (1–5)<input name="rating" type="number" min="1" max="5" step="1" required></label><label class="full-width">Text<textarea name="text" rows="5" required maxlength="1000"></textarea></label></div>
                 <label class="review-avatar-field">Fotografie de profil (opțional)<input name="avatar" maxlength="250" placeholder="assets/profil.jpg"><small>Lasă gol pentru un avatar rotund cu inițiale. Fotografia se copiază în folderul assets/.</small></label>
                 <div class="checkbox-row"><label><input name="visible" type="checkbox"> Afișează acest exemplu</label></div><button class="button button-primary" type="submit">Aplică modificările</button>
