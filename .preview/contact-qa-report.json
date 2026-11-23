@@ -1,0 +1,86 @@
+{
+  "checks": [
+    {
+      "name": "Automatic map and contact details",
+      "active": "contact",
+      "phone": "tel:+40767666909",
+      "map": "https://maps.google.com/maps?q=45.78860777%2C24.15142839&z=16&output=embed",
+      "eager": "eager",
+      "visible": 440.84375,
+      "manual": false,
+      "ids": [
+        "primary-navigation",
+        "continut",
+        "contact",
+        "contact-page-title",
+        "locatie",
+        "location-map",
+        "current-year"
+      ]
+    },
+    {
+      "name": "Maps work without activation, including without JavaScript",
+      "passed": true
+    }
+  ],
+  "viewports": [
+    {
+      "label": "contact-1440",
+      "width": 1440,
+      "documentWidth": 1425,
+      "overflowing": []
+    },
+    {
+      "label": "contact-768",
+      "width": 768,
+      "documentWidth": 753,
+      "overflowing": []
+    },
+    {
+      "label": "contact-390",
+      "width": 390,
+      "documentWidth": 390,
+      "overflowing": []
+    },
+    {
+      "label": "contact-320",
+      "width": 320,
+      "documentWidth": 320,
+      "overflowing": []
+    }
+  ],
+  "errors": [],
+  "screenshots": [
+    "contact-layout-1440.png",
+    "contact-layout-390.png",
+    "contact-map-loaded.png"
+  ],
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Edg/158.0.4370.33",
+    "revision": "@56b8f691820060b6e15f702165117f203442943f",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.0.0 Safari/537.36 Edg/158.0.0.0",
+    "jsVersion": "15.8.13.3"
+  },
+  "mapFrame": {
+    "frameTree": {
+      "frame": {
+        "id": "B0702470B0C056491386AAEA1DAD69A4",
+        "loaderId": "E5D0ECDE970422920DFC9156E9C81365",
+        "url": "file:///C:/Users/Claudiu/Desktop/La-Andrei-Site/contact.html",
+        "domainAndRegistry": "",
+        "securityOrigin": "file://",
+        "securityOriginDetails": {
+          "isLocalhost": false
+        },
+        "mimeType": "text/html",
+        "adFrameStatus": {
+          "adFrameType": "none"
+        },
+        "secureContextType": "Secure",
+        "crossOriginIsolatedContextType": "NotIsolated",
+        "gatedAPIFeatures": []
+      }
+    }
+  }
+}

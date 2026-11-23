@@ -1,6 +1,7 @@
 document.documentElement.classList.add('js');
 
 const navbar = document.querySelector('.site-header');
+const hero = document.querySelector('.hero');
 let scrollFramePending = false;
 
 function updateHeaderHeight() {
@@ -10,23 +11,25 @@ updateHeaderHeight();
 if ('ResizeObserver' in window) new ResizeObserver(updateHeaderHeight).observe(navbar);
 else window.addEventListener('resize', updateHeaderHeight);
 
-function updateNavbarOpacity() {
-    const opacity = Math.min(Math.max(window.scrollY / 400, 0), 1);
+function updateScrollEffects() {
+    const scroll = Math.max(window.scrollY, 0);
+    const opacity = Math.min(scroll / 400, 1);
     navbar.style.setProperty('--navbar-opacity', opacity);
-    const fadeSize = 28 * (1 - Math.min(Math.max(window.scrollY / 600, 0), 1));
+    const fadeSize = 28 * (1 - Math.min(scroll / 600, 1));
     navbar.style.setProperty('--navbar-fade-size', fadeSize + 'px');
+    if (hero) hero.style.setProperty('--hero-brightness', 1 - 0.18 * Math.min(scroll / 240, 1));
 }
 
 window.addEventListener('scroll', () => {
     if (scrollFramePending) return;
     scrollFramePending = true;
     window.requestAnimationFrame(() => {
-        updateNavbarOpacity();
+        updateScrollEffects();
         scrollFramePending = false;
     });
 }, { passive: true });
-window.addEventListener('pageshow', updateNavbarOpacity);
-updateNavbarOpacity();
+window.addEventListener('pageshow', updateScrollEffects);
+updateScrollEffects();
 
 const menuToggle = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('#primary-navigation');
@@ -78,60 +81,6 @@ filters.forEach((filter) => {
     });
 });
 
-function setupLocationMap() {
-const loadMapButton = document.querySelector('#load-map');
-const closeMapButton = document.querySelector('#close-map');
-const locationMap = document.querySelector('#location-map');
-const mapPreview = document.querySelector('#map-preview');
-const mapStatus = document.querySelector('#map-status');
-if (!loadMapButton || !closeMapButton || !locationMap || !mapPreview || !mapStatus) return;
-let mapRequested = false;
-let mapTimeout;
-
-loadMapButton.hidden = false;
-loadMapButton.addEventListener('click', () => {
-    mapRequested = true;
-    loadMapButton.disabled = true;
-    loadMapButton.textContent = 'Se încarcă harta…';
-    mapStatus.textContent = '';
-    locationMap.src = locationMap.dataset.src;
-    mapTimeout = window.setTimeout(() => {
-        mapRequested = false;
-        locationMap.removeAttribute('src');
-        loadMapButton.disabled = false;
-        loadMapButton.textContent = 'Reîncearcă încărcarea';
-        mapStatus.textContent = 'Harta nu s-a încărcat. Poți deschide locația folosind legătura Google Maps.';
-    }, 12000);
-});
-
-locationMap.addEventListener('load', () => {
-    if (!mapRequested) return;
-    window.clearTimeout(mapTimeout);
-    const shouldMoveFocus = document.activeElement === loadMapButton;
-    locationMap.hidden = false;
-    mapPreview.hidden = true;
-    closeMapButton.hidden = false;
-    loadMapButton.setAttribute('aria-expanded', 'true');
-    if (shouldMoveFocus) closeMapButton.focus({ preventScroll: true });
-});
-
-closeMapButton.addEventListener('click', () => {
-    mapRequested = false;
-    window.clearTimeout(mapTimeout);
-    locationMap.hidden = true;
-    locationMap.removeAttribute('src');
-    mapPreview.hidden = false;
-    closeMapButton.hidden = true;
-    loadMapButton.disabled = false;
-    loadMapButton.textContent = 'Încarcă harta interactivă';
-    loadMapButton.setAttribute('aria-expanded', 'false');
-    mapStatus.textContent = '';
-    loadMapButton.focus({ preventScroll: true });
-});
-
-}
-setupLocationMap();
-
 const productDialogs = document.querySelectorAll('.product-dialog');
 if (productDialogs.length && typeof productDialogs[0].showModal === 'function') {
     document.documentElement.classList.add('has-product-dialogs');
@@ -174,7 +123,7 @@ if ('IntersectionObserver' in window && !reducedMotion.matches) {
     }, { threshold: 0.08 });
 
     document.querySelectorAll('[data-reveal], .food-card, .review-card').forEach((element) => {
-        if (element.getBoundingClientRect().top >= window.innerHeight) {
+        if (element.matches('.home-menu .food-card') || element.getBoundingClientRect().top >= window.innerHeight) {
             element.classList.add('reveal', 'reveal-pending');
             observer.observe(element);
         }

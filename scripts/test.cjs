@@ -76,7 +76,7 @@ check('Text and attribute payloads stay escaped and reviews remain fictional', (
     assert.ok(model.renderMenu(safe).includes('&lt;script&gt;'));
     assert.ok(!model.renderMenu(safe).includes('<img src=x'));
     assert.ok(!model.renderReviews(safe).includes('<img src=x'));
-    assert.equal((model.renderReviews(safe).match(/Exemplu fictiv/g) || []).length, 3);
+    assert.equal((model.renderReviews(safe).match(/Exemplu — /g) || []).length, 3);
     const changedReview = copy(data); changedReview.reviews[0].isExample = false;
     assert.throws(() => model.validate(changedReview), /doar exemple fictive/);
     assert.ok(!model.renderSchema(safe).includes('aggregateRating'));
@@ -154,6 +154,11 @@ try {
         assert.ok(menu.includes('data-nav="menu" href="meniu.html" aria-current="page"'));
         assert.ok(contact.includes('id="locatie"'));
         assert.ok(contact.includes(data.business.phone));
+        const contactMap = contact.match(/<iframe\b[^>]*\bid="location-map"[^>]*>/)[0];
+        assert.ok(contactMap.includes(' src="https://maps.google.com/maps?'));
+        assert.ok(contactMap.includes('loading="eager"'));
+        assert.ok(!contactMap.includes('hidden'));
+        assert.ok(!contact.includes('id="load-map"'));
         assert.ok(contact.includes('data-nav="contact" href="contact.html" aria-current="page"'));
         assert.ok(!contact.includes('class="food-card'));
         for (const file of ['meniu.html', 'contact.html']) assert.equal(fs.readFileSync(path.join(fixture, 'dist', file), 'utf8'), fs.readFileSync(path.join(fixture, file), 'utf8'));
@@ -172,6 +177,10 @@ try {
         assert.ok(generated.includes('Luni: 10:00–20:00'));
         assert.ok(generated.includes('<a hidden data-business-phone'));
         assert.ok(generated.includes('"addressLocality":"Oraș nou"'));
+        const contact = fs.readFileSync(path.join(fixture, 'contact.html'), 'utf8');
+        assert.ok(contact.includes('contact%40example.com'));
+        assert.ok(contact.includes('Luni: 10:00–20:00'));
+        assert.ok(!contact.includes('class="contact-phone"'));
         changed.business.phone = '+40123456789';
         fs.writeFileSync(sourcePath, JSON.stringify(changed)); build(fixture);
         generated = fs.readFileSync(indexPath, 'utf8');

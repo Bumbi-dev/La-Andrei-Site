@@ -6,7 +6,7 @@ Pagina principală păstrează primele trei preparate vizibile și secțiunea de
 
 Un click pe fotografie, titlu, card sau butonul de detalii deschide un dialog cu ingredientele, gramajul total și prețul. Dialogul se închide prin buton, Escape sau click în afară. Butonul de comandă rămâne legătura directă către Bolt Food. Fără JavaScript, ingredientele rămân accesibile în fiecare card.
 
-Harta interactivă Google se încarcă doar la apăsarea butonului din cardul locației. Adresa și legăturile directe rămân disponibile și fără JavaScript sau dacă harta nu se încarcă.
+Harta interactivă Google se încarcă automat, fără buton de activare: imediat pe pagina de contact și când se apropie de zona vizibilă pe pagina principală. Adresa și legăturile directe rămân disponibile și fără JavaScript sau dacă harta nu se încarcă. Pagina de contact are un layout dedicat, adaptat pentru telefon, cu adresă, apel telefonic și acces la Bolt Food; programul și emailul apar doar dacă sunt completate în JSON.
 
 ## Actualizarea meniului
 
