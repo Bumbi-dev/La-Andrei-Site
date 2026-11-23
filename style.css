@@ -1288,8 +1288,9 @@ address span {
     color: var(--muted);
     font-size: 0.875rem;
 }
-.reviews-section { padding-top: 28px; border-top: 1px solid var(--line); }
+.reviews-section { padding-top: 88px; border-top: 1px solid var(--line); }
 .reviews-section .section-heading { align-items: center; margin-bottom: 20px; }
+.reviews-section:not([hidden]) + .location-section { padding-top: clamp(32px, 5vw, 56px); }
 .example-notice, .review-example-label {
     display: inline-block;
     width: fit-content;
